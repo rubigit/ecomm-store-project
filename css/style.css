@@ -1,1 +1,32 @@
 /* Note there a few "reset" styles given in reset.css. Review those before you begin */
+/* RESETS ::::::::::::::::::::::::::::::::::::::::*/
+html, body {
+	height: 100%;
+}
+
+body {
+  margin:0; 
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+* {
+  font-size: 1em;
+  font-weight: 400;
+  text-decoration: none; 
+  margin: 0;
+  padding:0;  
+}
+
+html {
+  box-sizing: border-box;
+    /*VAR FONTS*/
+   
+   /*VAR COLORS*/
+}
+
+ul, ol { 
+  list-style-type: none;
+}
