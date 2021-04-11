@@ -35,8 +35,51 @@ html {
 --clor-black:#000;
 --clor-dim-gray:#707070;
 
+/* VAR PADDGINS MARGINS */
+--common-gap: 0.5em;
+
 }
 
 ul, ol { 
   list-style-type: none;
+}
+
+
+.page-header {
+	display: grid;
+	border: 0.1em solid black;
+	grid-template-columns: auto 1fr auto auto;
+	grid-template-areas: 
+	"logo srch prod menu"
+	" .     .    .  navi";
+	gap:var(--common-gap);
+/
+}
+
+.logo {
+  grid-area: logo;
+	background-color:  red;
+
+}
+
+.search {
+  grid-area: srch;
+	background-color: cyan;
+}
+
+.your-products {
+	grid-area: prod;
+	background-color:  white;
+
+}
+
+.nav-toggle{
+	grid-area: menu;
+	background-color:  orange;
+}
+
+.navigation {
+	display: none;
+	grid-area: navi;
+	background-color:  rgb(163, 136, 85);
 }
