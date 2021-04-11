@@ -1,5 +1,5 @@
-/* Note there a few "reset" styles given in reset.css. Review those before you begin */
-/* RESETS ::::::::::::::::::::::::::::::::::::::::*/
+
+/* :::::::::::::::::::::::::::RESETS :::::::::::::::::::::::::::::::::::::::: */
 html, body {
 	height: 100%;
 }
@@ -44,7 +44,8 @@ ul, ol {
   list-style-type: none;
 }
 
-
+/* :::::::::::::::::::::::::::STYLE HTML ELEMENTS :::::::::::::::::::::::::::::::::::::::: */
+/* ---------- Grid CONTAINER for header */
 .page-header {
 	display: grid;
 	border: 0.1em solid black;
@@ -53,13 +54,12 @@ ul, ol {
 	"logo srch prod menu"
 	" .     .    .  navi";
 	gap:var(--common-gap);
-/
 }
 
+/* ---------- Grid ITEMS for header */
 .logo {
   grid-area: logo;
 	background-color:  red;
-
 }
 
 .search {
@@ -70,7 +70,8 @@ ul, ol {
 .your-products {
 	grid-area: prod;
 	background-color:  white;
-
+	display: flex;
+	gap:var(--common-gap);
 }
 
 .nav-toggle{
@@ -83,3 +84,5 @@ ul, ol {
 	grid-area: navi;
 	background-color:  rgb(163, 136, 85);
 }
+
+
