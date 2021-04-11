@@ -6,6 +6,7 @@ html, body {
 
 body {
   margin:0; 
+	background-color: bisque;
 }
 
 *, *::before, *::after {
@@ -25,6 +26,15 @@ html {
     /*VAR FONTS*/
    
    /*VAR COLORS*/
+--ctheme-c-red:#E3396A;
+--ctheme-dawn:#999897;
+--ctheme-malibu:#77CDF3;
+--clor-silver:#C9C9C9;
+--clor-white:#FFF;
+--clor-wsmoke:#EFEFEF;
+--clor-black:#000;
+--clor-dim-gray:#707070;
+
 }
 
 ul, ol { 
