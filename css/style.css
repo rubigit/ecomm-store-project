@@ -117,7 +117,6 @@ ul, ol {
 .search label {
 	align-content: center;
 	align-items: center;
-	/* color:inherit; */
 	display: flex;
 	flex: 1 1 auto;
 	gap:var(--common-gap);
@@ -138,14 +137,12 @@ ul, ol {
 	align-self: center;
 	border: 0.1em solid var(--ctheme-dawn);
 	border-radius: var(--common-bradius);
-	/* color:var(--clor-dim-gray); */
 	flex: 1 1 auto;
 	font-size: 1.2em;
 	padding: 0.1em var(--common-padding);
 }
 /* -- Search Input placeholder-- */
 .ibox-srch::placeholder{
-	color: red;
 	font-size:0.8em;
 	opacity:1;
 }
