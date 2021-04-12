@@ -154,5 +154,58 @@ ul, ol {
    =================================================== */
 
    .page-footer{
-	   background-color: magenta;
+	   background-color: var(--clor-silver);
+	   display: flex;
+	   flex-direction: column;
+	   align-items: center;
+	   padding-top: 1em;
+	   gap: calc(var(--common-gap)*2);
+   }
+   .social{
+	   display: flex;
+	   justify-content: space-between;
+	   gap: var(--common-gap);
+   }
+
+ .social li a {
+	 align-items: center;
+	 display: flex;
+	 flex-direction: column;
+	 gap: var(--common-gap);
+ }
+   
+ nav .legal {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+ }
+   
+   .copyright {
+	background-color: var(--clor-black);
+	color: white;
+	font-size: 0.8em;
+	padding:var(--common-padding) 0;
+	width:100%;
+	text-align: center;
+	
+   }
+
+
+   .legal > li {
+	color:var(--clor-black);
+	font-size: 1em;
+
+   }
+
+   .legal > li a {
+	display: flex;
+	flex-direction: column;
+	color:var(--clor-dim-gray);
+	font-size: 1em;
+	text-decoration: underline;
+	
+
+   }
+   .legal > li:nth-child(even){
+	padding: 0 calc(var(--common-padding)/2);
    }
