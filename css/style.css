@@ -38,6 +38,7 @@ html {
 /* VAR PADDGINS MARGINS */
 --common-gap: 0.5em;
 --common-padding:1em;
+--common-bradius:0.4em;
 
 }
 
@@ -49,16 +50,16 @@ ul, ol {
 /* ---------- Grid CONTAINER for header */
 .page-header {
 	align-items: center;
+	background-color: var(--clor-black);
+	color:var(--clor-silver);
 	display: grid;
-	border: 0.1em solid black;
+	gap:var(--common-gap);
 	grid-template-columns: 1fr auto auto;
 	grid-template-areas: 
 	"logo prod menu"
 	"srch srch srch";
-	gap:var(--common-gap);
-	padding:0 calc(var(--common-padding)*4);
-	background-color: var(--clor-white);
 	justify-content: space-between;
+	padding:0 calc(var(--common-padding)*1.5);
 }
 
 /* ---------- Grid ITEMS for header */
@@ -69,23 +70,29 @@ ul, ol {
 .search {
 	align-content: center;
 	align-items: center;
-  grid-area: srch;
 	display: flex;
-	justify-content: center;
+    grid-area: srch;
 	gap:var(--common-gap);
-	padding:0;
+	justify-content: space-between;
 }
 
 .your-products {
-	grid-area: prod;
-	background-color:  white;
+	color: inherit;
 	display: flex;
 	gap:var(--common-gap);
+	grid-area: prod;
 }
 
+.your-products > li .material-icons {
+	color:var(--clor-silver);
+}
+.your-products > li .material-icons:hover {
+	color:var(--ctheme-c-red);
+}
 .nav-toggle{
+	background-color: var(--clor-silver);
 	grid-area: menu;
-	background-color:  orange;
+
 }
 
 .navigation {
@@ -94,21 +101,32 @@ ul, ol {
 .search label {
 	align-content: center;
 	align-items: center;
+	color:inherit;
 	display: flex;
 	flex: 1 1 auto;
-	justify-content: space-evenly;
 	gap:var(--common-gap);
-	/* border: 0.5em solid violet; */
+	justify-content: space-between;
+	justify-self: flex-start;
 }
 
 .search button {
+	background-color: var(--clor-silver);
 	flex: 0 1 auto;
-
+	justify-self: flex-end;
 }
+
 .ibox-srch {
+	align-self: center;
 	border: 0.1em solid var(--ctheme-dawn);
-	border-radius: 4px ;
+	border-radius: var(--common-bradius);
 	flex: 1 1 auto;
 	font-size: 1.2em;
+	line-height: 1.2; 
+	padding: 0.1em var(--common-padding);
+}
 
+.ibox-srch::placeholder {
+	color: var(--clor-silver);
+	font-size:0.8em;
+	opacity: 1;
 }
