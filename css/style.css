@@ -37,6 +37,7 @@ html {
 
 /* VAR PADDGINS MARGINS */
 --common-gap: 0.5em;
+--common-padding:1em;
 
 }
 
@@ -47,6 +48,7 @@ ul, ol {
 /* :::::::::::::::::::::::::::STYLE HTML ELEMENTS :::::::::::::::::::::::::::::::::::::::: */
 /* ---------- Grid CONTAINER for header */
 .page-header {
+	align-items: center;
 	display: grid;
 	border: 0.1em solid black;
 	grid-template-columns: auto 1fr auto auto;
@@ -54,13 +56,15 @@ ul, ol {
 	"logo srch prod menu"
 	" .     .    .  navi";
 	gap:var(--common-gap);
+	padding:0 calc(var(--common-padding)*3);
+	background-color: var(--clor-white);
 
 }
 
 /* ---------- Grid ITEMS for header */
 .logo {
   grid-area: logo;
-	background-color:  rgb(0, 0, 0);
+	
 }
 
 .search {
@@ -85,5 +89,3 @@ ul, ol {
 	grid-area: navi;
 	background-color:  rgb(163, 136, 85);
 }
-
-
