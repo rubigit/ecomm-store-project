@@ -64,7 +64,8 @@ ul, ol {
 	"srch srch srch";
 	justify-content: space-between;
 	padding:var(--common-padding) calc(var(--common-padding)*1.5);
-
+	width:auto;
+	max-width: 100%;
 }
 /* ---------- HEADER GRID ITEMS ----------  */
 /* --- HEADER GRID ITEM (logo) */
