@@ -64,6 +64,7 @@ ul, ol {
 	"srch srch srch";
 	justify-content: space-between;
 	padding:var(--common-padding) calc(var(--common-padding)*1.5);
+
 }
 /* ---------- HEADER GRID ITEMS ----------  */
 /* --- HEADER GRID ITEM (logo) */
@@ -121,7 +122,6 @@ ul, ol {
 	flex: 1 1 auto;
 	gap:var(--common-gap);
 	justify-content: space-between;
-	justify-self: flex-start;
 }
 
 /* ---- FORM SEARCH FLEX ITEM (search button) */
@@ -134,17 +134,18 @@ ul, ol {
 /* ------------------------------------------------*/
 /* ---- SEARCH LABEL FLEX ITEM (Search Input) */
 .ibox-srch {
-	align-self: center;
 	border: 0.1em solid var(--ctheme-dawn);
 	border-radius: var(--common-bradius);
 	flex: 1 1 auto;
 	font-size: 1.2em;
 	padding: 0.1em var(--common-padding);
+	width: 8em;
 }
 /* -- Search Input placeholder-- */
 .ibox-srch::placeholder{
-	font-size:0.8em;
-	opacity:1;
+	font-size:0.8em;  
+	opacity:0.7;
+
 }
 /* =================================================== */
 
