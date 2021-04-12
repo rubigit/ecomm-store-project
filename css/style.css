@@ -47,7 +47,10 @@ ul, ol {
 }
 
 /* :::::::::::::::::::::::::::STYLE HTML ELEMENTS :::::::::::::::::::::::::::::::::::::::: */
-/* ---------- Grid CONTAINER for header */
+/* ===================================================
+						HEADER
+   =================================================== */
+/* ---------- GRID CONTAINER HEADER----------  */
 .page-header {
 	align-items: center;
 	background-color: var(--clor-black);
@@ -59,14 +62,31 @@ ul, ol {
 	"logo prod menu"
 	"srch srch srch";
 	justify-content: space-between;
-	padding:0 calc(var(--common-padding)*1.5);
+	padding:var(--common-padding) calc(var(--common-padding)*1.5);
 }
-
-/* ---------- Grid ITEMS for header */
+/* ---------- HEADER GRID ITEMS ----------  */
+/* --- HEADER GRID ITEM (logo) */
 .logo {
   grid-area: logo;
 }
 
+/* --- HEADER GRID ITEM (your-products)*/
+/* ---------- FLEX CONTAINER YOUR PRODUCTS ----- */
+.your-products {
+	color: inherit;
+	display: flex;
+	gap:var(--common-gap);
+	grid-area: prod;
+}
+
+/* --- HEADER GRID ITEM (toggle button menu) */
+.nav-toggle{
+	background-color: var(--clor-silver);
+	grid-area: menu;
+}
+
+/* --- HEADER GRID ITEM (form Search) */
+/* ---------- FLEX CONTAINER FORM SEARCH ----- */
 .search {
 	align-content: center;
 	align-items: center;
@@ -76,28 +96,23 @@ ul, ol {
 	justify-content: space-between;
 }
 
-.your-products {
-	color: inherit;
-	display: flex;
-	gap:var(--common-gap);
-	grid-area: prod;
+/* ------------------------------------------------*/
+/* -- Nav for navigation menu items-- */
+.navigation {
+	display: none;
 }
-
+/* =================================================== */
+/* --- YOUR PRODUCTS FLEX ITEMS (like and shopping cart icons) */
 .your-products > li .material-icons {
 	color:var(--clor-silver);
 }
 .your-products > li .material-icons:hover {
 	color:var(--ctheme-c-red);
 }
-.nav-toggle{
-	background-color: var(--clor-silver);
-	grid-area: menu;
 
-}
-
-.navigation {
-	display: none;
-}
+/* ------------------------------------------------*/
+/* ---- FORM SEARCH FLEX ITEM ( search label) */
+/* ---------- FLEX CONTAINER SEARCH LABEL----- */
 .search label {
 	align-content: center;
 	align-items: center;
@@ -109,12 +124,15 @@ ul, ol {
 	justify-self: flex-start;
 }
 
+/* ---- FORM SEARCH FLEX ITEM (search button) */
 .search button {
 	background-color: var(--clor-silver);
 	flex: 0 1 auto;
 	justify-self: flex-end;
 }
 
+/* ------------------------------------------------*/
+/* ---- SEARCH LABEL FLEX ITEM (Search Input) */
 .ibox-srch {
 	align-self: center;
 	border: 0.1em solid var(--ctheme-dawn);
@@ -124,9 +142,14 @@ ul, ol {
 	line-height: 1.2; 
 	padding: 0.1em var(--common-padding);
 }
-
+/* -- Search Input placeholder-- */
 .ibox-srch::placeholder {
 	color: var(--clor-silver);
 	font-size:0.8em;
 	opacity: 1;
 }
+/* =================================================== */
+
+/* ===================================================
+						FOOTER
+   =================================================== */
