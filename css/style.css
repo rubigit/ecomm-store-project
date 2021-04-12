@@ -54,12 +54,13 @@ ul, ol {
 	"logo srch prod menu"
 	" .     .    .  navi";
 	gap:var(--common-gap);
+
 }
 
 /* ---------- Grid ITEMS for header */
 .logo {
   grid-area: logo;
-	background-color:  red;
+	background-color:  rgb(0, 0, 0);
 }
 
 .search {
