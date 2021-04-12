@@ -51,25 +51,29 @@ ul, ol {
 	align-items: center;
 	display: grid;
 	border: 0.1em solid black;
-	grid-template-columns: auto 1fr auto auto;
+	grid-template-columns: 1fr auto auto;
 	grid-template-areas: 
-	"logo srch prod menu"
-	" .     .    .  navi";
+	"logo prod menu"
+	"srch srch srch";
 	gap:var(--common-gap);
-	padding:0 calc(var(--common-padding)*3);
+	padding:0 calc(var(--common-padding)*4);
 	background-color: var(--clor-white);
-
+	justify-content: space-between;
 }
 
 /* ---------- Grid ITEMS for header */
 .logo {
   grid-area: logo;
-	
 }
 
 .search {
+	align-content: center;
+	align-items: center;
   grid-area: srch;
-	background-color: cyan;
+	display: flex;
+	justify-content: center;
+	gap:var(--common-gap);
+	padding:0;
 }
 
 .your-products {
@@ -86,6 +90,25 @@ ul, ol {
 
 .navigation {
 	display: none;
-	grid-area: navi;
-	background-color:  rgb(163, 136, 85);
+}
+.search label {
+	align-content: center;
+	align-items: center;
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: space-evenly;
+	gap:var(--common-gap);
+	/* border: 0.5em solid violet; */
+}
+
+.search button {
+	flex: 0 1 auto;
+
+}
+.ibox-srch {
+	border: 0.1em solid var(--ctheme-dawn);
+	border-radius: 4px ;
+	flex: 1 1 auto;
+	font-size: 1.2em;
+
 }
