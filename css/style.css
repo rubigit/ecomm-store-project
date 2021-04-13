@@ -72,6 +72,8 @@ ul, ol {
 	background-color: var(--clor-black);
 	color:var(--clor-silver);
 	display: grid;
+	font-family:var(--fnt-nuni);
+	font-size:1.1em;
 	gap:var(--common-gap);
 	grid-template-columns: 1fr auto auto;
 	grid-template-areas: 
@@ -132,6 +134,8 @@ ul, ol {
 	align-items: center;
 	display: flex;
 	flex: 1 1 auto;
+	font-family: inherit;
+	font-size: inherit;
 	gap:var(--common-gap);
 	justify-content: space-between;
 }
@@ -148,7 +152,8 @@ ul, ol {
 	border: 0.1em solid var(--ctheme-dawn);
 	border-radius: var(--common-bradius);
 	flex: 1 1 auto;
-	font-size: 1.2em;
+	font-size: inherit;
+	font-family: inherit;
 	padding: 0.1em var(--common-padding);
 	width: 8em;
 }
@@ -226,7 +231,7 @@ nav .legal {
 .copyright {
 	background-color: var(--clor-black);
 	color:var(--clor-white);
-	font-size: 0.8em;
+	font-size: 0.9em;
 	font-family:inherit;
 	padding:calc(var(--common-padding)*1.5) 0;
 	width:100%;
