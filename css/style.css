@@ -90,7 +90,7 @@ ul, ol {
   grid-area: logo;
 }
 
-/* --- your-products FLEX CONTAINER  */
+/* --- your-products, FLEX CONTAINER  */
 .your-products {
 	color: inherit;
 	display: flex;
@@ -104,7 +104,7 @@ ul, ol {
 	grid-area: menu;
 }
 
-/* --- form search FLEX CONTAINER */
+/* --- form search, FLEX CONTAINER */
 .search {
 	align-content: center;
 	align-items: center;
@@ -128,7 +128,7 @@ ul, ol {
 	color:var(--ctheme-c-red);
 }
 
-/* --- Search label FLEX CONTAINER*/
+/* --- Search label, FLEX CONTAINER*/
 .search label {
 	align-content: center;
 	align-items: center;
@@ -140,13 +140,6 @@ ul, ol {
 	justify-content: space-between;
 }
 
-/* --- search button */
-.search button {
-	background-color: var(--clor-silver);
-	flex: 0 1 auto;
-	justify-self: flex-end;
-}
-
 /* --- Search Input*/
 .ibox-srch {
 	border: 0.1em solid var(--ctheme-dawn);
@@ -154,7 +147,7 @@ ul, ol {
 	flex: 1 1 auto;
 	font-size: inherit;
 	font-family: inherit;
-	padding: 0.1em var(--common-padding);
+	padding: 0.3em var(--common-padding);
 	width: 8em;
 }
 /* --- Search Input placeholder-- */
@@ -163,8 +156,12 @@ ul, ol {
 	opacity:0.7;
 }
 
-
-
+/* --- search button */
+.search button {
+	background-color: var(--clor-silver);
+	flex: 0 1 auto;
+	justify-self: flex-end;
+}
 
 /* ===================================================
 						FOOTER
@@ -186,14 +183,14 @@ ul, ol {
 --fnt-exo2 */
 
 /* --------------------FOOTER FLEX ITEMS ----------------- */
-/* --- Social icons FLEX CONTAINER */
+/* --- Social icons, FLEX CONTAINER */
 .social{
 	display: flex;	
 	gap: var(--common-gap);
 	justify-content: space-between;
 }
 
-/* --- Social icons items FLEX CONTAINER*/
+/* --- Social icons items, FLEX CONTAINER*/
 .social li a {
 	align-items: center;
 	color: inherit;
@@ -204,14 +201,14 @@ ul, ol {
 	gap: var(--common-gap);
 }
 
-/* --- Nav legal FLEX CONTAINER*/
+/* --- Nav legal, FLEX CONTAINER*/
 nav .legal {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
    
-/* --- Text anchor legal items FLEX CONTAINER*/
+/* --- Text anchor legal items, FLEX CONTAINER*/
 .legal > li a {
 	display: flex;
 	color:inherit;
