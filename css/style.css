@@ -106,12 +106,12 @@ ul, ol {
 
 /* --- form search, FLEX CONTAINER */
 .search {
-	align-content: center;
-	align-items: center;
+	align-items:flex-end;
 	display: flex;
     grid-area: srch;
-	gap:var(--common-gap);
+	gap:calc(var(--common-gap)*2);
 	justify-content: space-between;
+	vertical-align:text-bottom;
 }
 
 /* ------------------------------------------------*/
@@ -130,20 +130,22 @@ ul, ol {
 
 /* --- Search label, FLEX CONTAINER*/
 .search label {
-	align-content: center;
-	align-items: center;
+	align-items:inherit;
+	
 	display: flex;
 	flex: 1 1 auto;
 	font-family: inherit;
 	font-size: inherit;
-	gap:var(--common-gap);
+	gap:calc(var(--common-gap)*2);
 	justify-content: space-between;
 }
 
 /* --- Search Input*/
 .ibox-srch {
-	border: 0.1em solid var(--ctheme-dawn);
-	border-radius: var(--common-bradius);
+	border:none;
+	border-bottom: 0.05em solid var(--clor-white);
+	background-color: rgb(0, 0, 0);
+	color: inherit;
 	flex: 1 1 auto;
 	font-size: inherit;
 	font-family: inherit;
@@ -152,15 +154,32 @@ ul, ol {
 }
 /* --- Search Input placeholder-- */
 .ibox-srch::placeholder{
+	color: inherit;
 	font-size:0.8em;  
-	opacity:0.7;
+	opacity:0.9;
 }
 
+
+.ibox-srch:focus {
+	outline: none;
+	border-bottom: 0.05em solid var(--ctheme-c-red);
+	/* background-color: var(--clor-white); */
+}
 /* --- search button */
 .search button {
 	background-color: var(--clor-silver);
 	flex: 0 1 auto;
 	justify-self: flex-end;
+}
+
+.ibox-srch:focus::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+	/* position:relative; */
+ 
+    height: 0.8em;
+    width: 0.8em;
+	background-image: url("../img/close-x-01.svg");
+
 }
 
 /* ===================================================
