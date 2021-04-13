@@ -35,6 +35,14 @@ body {
   margin: 0;
   padding:0;  
 }
+
+img{
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	vertical-align: bottom;
+  }
+
 /* ----- VARIABLES ----------- */
 html {
   box-sizing: border-box;
@@ -88,6 +96,8 @@ ul, ol {
 /* --- logo */
 .logo {
   grid-area: logo;
+  width:auto;
+  max-width: 7em;
 }
 
 /* --- your-products, FLEX CONTAINER  */
@@ -187,7 +197,7 @@ ul, ol {
    =================================================== */
 /* -------------- FLEX CONTAINER FOOTER--------------- */
 .page-footer{
-	align-items: center;
+	align-items:center;
 	background-color: var(--clor-silver);
 	color:var(--ctheme-dawn);
 	display: flex;
@@ -198,11 +208,13 @@ ul, ol {
 	font-family:var(--fnt-nuni);
 }
 
-/* --fnt-nuni
---fnt-exo2 */
 
 /* --------------------FOOTER FLEX ITEMS ----------------- */
 /* --- Social icons, FLEX CONTAINER */
+.logofooter img{
+	width:5em;
+}
+
 .social{
 	display: flex;	
 	gap: var(--common-gap);
@@ -255,4 +267,10 @@ nav .legal {
 	padding:calc(var(--common-padding)*1.5) 0;
 	width:100%;
 	text-align: center;
+}
+
+
+/* ------ PRODUCT FILTERS */
+.filters {
+/* display:none; */
 }
