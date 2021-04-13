@@ -6,6 +6,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 /* Bold 700 */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+/* ------------------------------------------------------------------------------- */
+/* font-family: 'Exo 2', sans-serif; */
+/* Regular 400 */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+/* Bold 700 */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
 
 /* :::::::::::::::::::::::::::RESETS :::::::::::::::::::::::::::::::::::::::: */
 html, body {
@@ -33,7 +39,8 @@ body {
 html {
   box-sizing: border-box;
     /*VAR FONTS*/
-   
+--fnt-nuni: Nunito, Verdana, Geneva, Tahoma, sans-serif;
+--fnt-exo2:'Exo 2',Arial, Helvetica, sans-serif;
    /*VAR COLORS*/
 --ctheme-c-red:#E3396A;
 --ctheme-dawn:#999897;
@@ -167,7 +174,11 @@ ul, ol {
 	font-size: 1em;
 	gap: calc(var(--common-gap)*2);
 	padding-top: var(--common-padding);
+	font-family:var(--fnt-nuni);
 }
+
+/* --fnt-nuni
+--fnt-exo2 */
 
 /* --------------------FOOTER FLEX ITEMS ----------------- */
 /* --- Social icons FLEX CONTAINER */
@@ -184,6 +195,7 @@ ul, ol {
 	display: flex;
 	flex-direction: column;
 	font-size: inherit;
+	font-family:inherit;
 	gap: var(--common-gap);
 }
 
@@ -200,13 +212,14 @@ nav .legal {
 	color:inherit;
 	flex-direction: column;
 	font-size: inherit;
+	font-family:inherit;
 	text-decoration: underline;
 }
 
 /* --- Slash division for anchor legal items*/
 .legal > li:nth-child(even){
 	color:var(--clor-black);
-	padding: 0 calc(var(--common-padding)/2);
+	padding: 0 var(--common-padding);
 }
 
 /* copyRights information  */
@@ -214,7 +227,8 @@ nav .legal {
 	background-color: var(--clor-black);
 	color:var(--clor-white);
 	font-size: 0.8em;
-	padding:var(--common-padding) 0;
+	font-family:inherit;
+	padding:calc(var(--common-padding)*1.5) 0;
 	width:100%;
 	text-align: center;
 }
