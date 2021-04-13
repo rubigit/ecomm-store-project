@@ -225,6 +225,7 @@ nav .legal {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	/* gap: var(--common-gap); */
 }
    
 /* --- Text anchor legal items, FLEX CONTAINER*/
@@ -235,12 +236,14 @@ nav .legal {
 	font-size: inherit;
 	font-family:inherit;
 	text-decoration: underline;
+	padding:calc(var(--common-padding)/3.33) 0;
+
 }
 
 /* --- Slash division for anchor legal items*/
 .legal > li:nth-child(even){
 	color:var(--clor-black);
-	padding: 0 var(--common-padding);
+	padding: calc(var(--common-padding)/3.33) var(--common-padding);
 }
 
 /* copyRights information  */
