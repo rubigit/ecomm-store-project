@@ -148,6 +148,7 @@ ul, ol {
 	font-size: inherit;
 	gap:calc(var(--common-gap)*2);
 	justify-content: space-between;
+	line-height:0.7;
 }
 
 /* --- Search Input*/
@@ -185,11 +186,9 @@ ul, ol {
 .ibox-srch:focus::-webkit-search-cancel-button {
 	-webkit-appearance: none;
 	/* position:relative; */
- 
     height: 0.8em;
     width: 0.8em;
 	background-image: url("../img/close-x-01.svg");
-
 }
 
 /* ===================================================
