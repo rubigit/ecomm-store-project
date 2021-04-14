@@ -271,81 +271,82 @@ nav .legal {
 	text-align: center;
 }
 
+
+
+
 /* ------------------ */
 /* polaroid */
 .heading{
-	position: relative;
-	font-size: 1.2em;
-	color:white;
+	color:var(--clor-white);
+	font-size: 1.3em;
 	font-family:var(--fnt-nuni);
+	font-weight:lighter;
+	text-align: center;
+	position: relative;
+}
+
+.heading * { 
+	font-size: inherit;
+	font-family:inherit;
+	font-weight:inherit;
+	text-align: inherit;
 }
 
 /* photo */
 .img-onsale{
-	display: block;
-	max-width: 100%;
-	height: 100%;
+	/* display: block; */
+	/* border-bottom: 0.03em solid rgb(0, 0, 0); */
 }
 
 /* caption */
 .bg-onsale-pgraph{
-	width: calc(100% - var(--newleft));
-	height: 100%;
+	
+	align-items:center;
 	display: flex;
-	position: absolute;
 	flex-direction: column;
+	justify-content:space-evenly;
+	height: 100%;
+	width: calc(100% - var(--newleft));	
 	left:var(--newleft);
 	bottom: 0;
-	justify-content:space-evenly;
-	align-items:center;
-	/* border: 0.2em solid red; */
+	position: absolute;		
+	/* border: 0.03em solid rgb(95, 212, 187); */
 }
 
 .onsale-pgraph {
-	font-family:inherit;
-	font-size: inherit;
-	font-weight: bolder;
     color:var(--ctheme-dawn);
-	font-weight: 300;
+	line-height:0.7;
     text-shadow: 
-	0 0 0.05em rgb(0, 0, 0),
+	0 0 0.05em var(--clor-black),
 	0 0 0.07em rgb(221, 221, 221);
-	max-width: 100%;
-	text-align: center;
-	line-height:1.2 ;
 }
 .onsale-pgraph span{
-	font-family:inherit;
-	font-size: inherit;
-	font-weight: 100;
     color:var(--ctheme-malibu);
     text-shadow: 
-	0 0 0.05em rgb(0, 0, 0),
+	0 0 0.05em var(--clor-black),
 	0 0 0.5em rgba(176, 238, 253, 0.6),
 	0 0 0.5em rgba(176, 235, 253, 0.6),
 	0 0 0.5em rgba(92, 90, 200, 0.6);
 }
 
 
-
-.discount-pgraph, .onsale-cagory {
-	font-family:inherit;
-	font-size: 0.7em;
-	font-weight:lighter;
+.onsale-cagory {
+	font-size: 0.6em;
+	padding: var(--common-padding) 0;
 }
 
-.discount-pgraph span, .onsale-cagory span:nth-child(even){
-	font-family:var(--fnt-exo2);
+.onsale-cagory span:nth-child(even){
 	color: var(--ctheme-c-red);
-	padding: 0.3em;
-	font-size: 1em;
+	font-family:var(--fnt-exo2);
+	padding-left:0.3em;
 	text-transform: uppercase;
 }
 
 .btn-onsale{
 	width: 100px;
-	height: 15px;
-	background-color: rgb(35, 184, 137);
+	height: 20px;
+	background-color: rgba(35, 184, 137,0.7);
+	font-size: 0.7em;
 }
 
 /* ------ PRODUCT FILTERS */
