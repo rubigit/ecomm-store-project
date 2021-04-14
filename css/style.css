@@ -355,26 +355,29 @@ nav .legal {
 /* :::::::::::::::::::::::::::::::::::::::::: */
 
 .products{
-	padding: 0 0.5em;
+	/* padding: 0 0.5em; */
 }
 
 .filters{
 	display:flex;
 	justify-content: flex-end;
 	align-items: flex-end;
-	padding: 0.5em 0;
+	padding: 0 0.5em;
+	background-color: rgb(228, 193, 193);
 }
 
 .filter-form{
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
+	padding: 0.5em 0;
 }
 
 .filter-options{
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
+	
 }
 
 .filter-options fieldset, .filter-form h2{
@@ -386,14 +389,17 @@ display: none;
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-direction: column;
+	gap:0.5em;
+	padding: 0.5em 0;
+	
 	
 }
 
 .subheading{
-	/* line-height:0.7; */
+	line-height:0.9;
 		color: red;
 		font-size: 1.5em;
-		align-self: baseline;
+		border:0.03em solid black;
 
 }
 .sort-options{
@@ -408,6 +414,19 @@ display: none;
 	border:0;
 }
 
+.results {
+	background-color: rgb(211, 211, 211);
+	/* border: 0.5em solid rgb(255, 238, 0); */
+	padding:0 0.5em;
+}
+
+
+.pagination {
+	background-color: rgb(251, 235, 235);
+	padding:0 0.5em;
+	
+}
+
 /* ------ PRODUCT FILTERS */
 
 @media screen and (min-width: 40em) {
@@ -419,13 +438,10 @@ display: none;
 	}
 
 	.heading {
-		background-color: rgb(238, 70, 70);
-		border: 0.5em solid red;
 		grid-column: 1 / span 2;
 	}
 	.filters {
-		background-color: cadetblue;
-		border: 0.5em solid rgb(72, 121, 122);
+		background-color: rgb(255, 255, 255);
 		grid-row: 2 / span 2;
 		align-items: flex-start;
 		justify-content: flex-start;
@@ -433,13 +449,10 @@ display: none;
 	
 
 	.results {
-		background-color: rgb(207, 200, 98);
-		border: 0.5em solid rgb(255, 238, 0);
+
 	}
 	
 	.pagination {
-		background-color: rgb(134, 124, 224);
-		border: 0.5em solid rgb(32, 30, 184);
 		grid-column: 2;
 	}
 
