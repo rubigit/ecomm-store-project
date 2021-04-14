@@ -20,7 +20,7 @@ html, body {
 
 body {
   margin:0; 
-	background-color: bisque;
+	background-color: rgb(179, 162, 162);
 }
 
 *, *::before, *::after {
@@ -63,6 +63,7 @@ html {
 --common-gap: 0.5em;
 --common-padding:1em;
 --common-bradius:0.4em;
+--newleft:35% /* -- to calulate left value for a absolute item*/
 
 }
 
@@ -106,6 +107,8 @@ ul, ol {
 	display: flex;
 	gap:var(--common-gap);
 	grid-area: prod;
+
+	
 }
 
 /* --- toggle button menu*/
@@ -268,6 +271,82 @@ nav .legal {
 	text-align: center;
 }
 
+/* ------------------ */
+/* polaroid */
+.heading{
+	position: relative;
+	font-size: 1.2em;
+	color:white;
+	font-family:var(--fnt-nuni);
+}
+
+/* photo */
+.img-onsale{
+	display: block;
+	max-width: 100%;
+	height: 100%;
+}
+
+/* caption */
+.bg-onsale-pgraph{
+	width: calc(100% - var(--newleft));
+	height: 100%;
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	left:var(--newleft);
+	bottom: 0;
+	justify-content:space-evenly;
+	align-items:center;
+	/* border: 0.2em solid red; */
+}
+
+.onsale-pgraph {
+	font-family:inherit;
+	font-size: inherit;
+	font-weight: bolder;
+    color:var(--ctheme-dawn);
+	font-weight: 300;
+    text-shadow: 
+	0 0 0.05em rgb(0, 0, 0),
+	0 0 0.07em rgb(221, 221, 221);
+	max-width: 100%;
+	text-align: center;
+	line-height:1.2 ;
+}
+.onsale-pgraph span{
+	font-family:inherit;
+	font-size: inherit;
+	font-weight: 100;
+    color:var(--ctheme-malibu);
+    text-shadow: 
+	0 0 0.05em rgb(0, 0, 0),
+	0 0 0.5em rgba(176, 238, 253, 0.6),
+	0 0 0.5em rgba(176, 235, 253, 0.6),
+	0 0 0.5em rgba(92, 90, 200, 0.6);
+}
+
+
+
+.discount-pgraph, .onsale-cagory {
+	font-family:inherit;
+	font-size: 0.7em;
+	font-weight:lighter;
+}
+
+.discount-pgraph span, .onsale-cagory span:nth-child(even){
+	font-family:var(--fnt-exo2);
+	color: var(--ctheme-c-red);
+	padding: 0.3em;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.btn-onsale{
+	width: 100px;
+	height: 15px;
+	background-color: rgb(35, 184, 137);
+}
 
 /* ------ PRODUCT FILTERS */
 .filters {
