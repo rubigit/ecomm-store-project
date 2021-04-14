@@ -20,7 +20,7 @@ html, body {
 
 body {
   margin:0; 
-	background-color: rgb(179, 162, 162);
+	background-color: rgb(0, 0, 0);
 }
 
 *, *::before, *::after {
@@ -354,8 +354,9 @@ nav .legal {
 /* ::::::::::::::::::::::::::::::::::::::::::: */
 /* :::::::::::::::::::::::::::::::::::::::::: */
 
-
-
+.products{
+	padding: 0 0.5em;
+}
 
 .filters{
 	display:flex;
@@ -419,12 +420,12 @@ display: none;
 
 	.heading {
 		background-color: rgb(238, 70, 70);
-		border: 1em solid red;
+		border: 0.5em solid red;
 		grid-column: 1 / span 2;
 	}
 	.filters {
 		background-color: cadetblue;
-		border: 1em solid rgb(72, 121, 122);
+		border: 0.5em solid rgb(72, 121, 122);
 		grid-row: 2 / span 2;
 		align-items: flex-start;
 		justify-content: flex-start;
@@ -433,12 +434,12 @@ display: none;
 
 	.results {
 		background-color: rgb(207, 200, 98);
-		border: 1em solid rgb(255, 238, 0);
+		border: 0.5em solid rgb(255, 238, 0);
 	}
 	
 	.pagination {
 		background-color: rgb(134, 124, 224);
-		border: 1em solid rgb(32, 30, 184);
+		border: 0.5em solid rgb(32, 30, 184);
 		grid-column: 2;
 	}
 
