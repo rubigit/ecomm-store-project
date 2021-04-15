@@ -259,7 +259,7 @@ border-color: var(--ctheme-malibu);
 	align-items:center;
 	display: flex;
 	flex-direction: column;
-	justify-content:space-around;
+	justify-content:space-evenly;
 	height: 100%;
 	width: calc(100% - var(--newleft));	
 	left:var(--newleft);
@@ -287,7 +287,6 @@ border-color: var(--ctheme-malibu);
 /* -- onsale cathegory paragraph*/
 .onsale-cagory {
 	font-size: var(--fsize-xs);
-	padding: var(--common-padding) 0;
 }
 /* -- highlight text from onsale cathegory paragraph*/
 .onsale-cagory span:nth-child(even){
