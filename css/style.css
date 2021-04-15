@@ -20,7 +20,7 @@ html, body {
 
 body {
   margin:0; 
-	background-color: rgba(171, 171, 172, 0.863);
+	background-color: rgba(255, 255, 255, 0.863);
 }
 
 *, *::before, *::after {
@@ -276,7 +276,9 @@ nav .legal {
 /* ===================================================
 						MAIN
    =================================================== */
-
+/* -------------------------------------------------------
+				MAIN HEADER ITEM ON SALE
+------------------------------------------------------- */
 /* ---header container for main onsale product-------    */
 .heading{
 	color:var(--clor-white);
@@ -356,15 +358,9 @@ nav .legal {
 }
 
 
-/* ::::::::::::::::::::::::::::::::::::::::::: */
-/* :::::::::::::::::::::::::::::::::::::::::: */
-
-/* -- Add shadow to all image products */
-.product img {
-  box-shadow: -0.2em 0.2em 0.2em grey; 
-  max-width: 100%;
-}
-
+/* ::::::::::::::::::::::::::::::::::::::::::: 
+                   FILTERS 
+:::::::::::::::::::::::::::::::::::::::::: */
 /* -- Main container for filters */
 .filters{
 	display:flex;
@@ -373,7 +369,6 @@ nav .legal {
 	padding: 0.5em 1em;
 	flex-direction: column;
 	gap: 1em
-
 }
 
 .filter-options{
@@ -387,25 +382,33 @@ nav .legal {
 display: none;
 }
 
-.results-hding{
+/* ::::::::::::::::::::::::::::::::::::::::::: 
+                   RESULTS 
+:::::::::::::::::::::::::::::::::::::::::: */
+
+.results {
+	background-color: rgb(255, 255, 255);
+	/* border: 0.5em solid rgb(255, 238, 0); */
+	padding:0 1em;
+}
+
+.results-hding {
 	display:flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-direction: column;
 	gap:0.5em;
 	padding: 0.5em 0;
-	
-	
 }
 
-.subheading{
+.subheading {
 	line-height:0.9;
 		color: red;
 		font-size: 1.5em;
 		border:0.03em solid black;
-
 }
-.sort-options{
+
+.sort-options {
 	
 	display: flex;
 	/* flex-direction: column; */
@@ -417,20 +420,130 @@ display: none;
 	border:0;
 }
 
-.results {
-	background-color: rgb(255, 255, 255);
-	/* border: 0.5em solid rgb(255, 238, 0); */
-	padding:0 1em;
+/* ::::::::::::::::::::::::::::::::::::::::::: 
+                   PRODUCTS 
+:::::::::::::::::::::::::::::::::::::::::: */
+
+.product{
+	display: flex;
+	flex-direction: column;
+	gap:0.5em;
+	margin: 1em 0;
+	font-family: var(--fnt-nuni);
+	/* border:0.3em solid red; */
+}
+.product header{
+	/* background-color: rgb(73, 226, 142); */
+	display:flex;
+	flex-direction: column;
+	gap:1em;
+	
+	/* border:0.3em solid red; */
+}
+
+/* -- Add shadow to all image products */
+.product img {
+	box-shadow: -0.2em 0.2em 0.2em grey; 
+	max-width: 100%;
+  }
+  
+
+.prod-name-price {
+	display:flex;
+						/* -- change here direction to column */
+	justify-content:space-between;
+	align-items: flex-end;
 }
 
 
-.pagination {
-	background-color: rgb(251, 235, 235);
-	padding:0 0.5em;
+.prod-name-price h3{
+	font-size: 1em;
+	line-height: 1.7;
+}
+
+.prod-name-price del{
+text-decoration:line-through;
+padding-right: 0.5em;
+color:var(--ctheme-c-red);
+}
+
+.prod-name-price ins{
+	color:var(--ctheme-malibu);
+	font-family: var(--fnt-exo2);
+	font-size: 1.5em;
+    text-shadow: 
+	0 0 0.05em var(--clor-black),
+	0 0 0.5em rgba(201, 239, 248, 0.6),
+	0 0 0.5em rgba(226, 222, 201, 0.6),
+	0 0 0.5em rgba(166, 165, 228, 0.6);
+}
+
+.prod-description-rate {  
+	display:flex;
+						/* -- change here direction to column */
+	justify-content:space-between;
+	align-content: flex-start;
+}
+
+
+/* -- product description paragraph */
+.prod-description-rate p{
+	flex: 1 1 50%;
+}
+
+/* -- start icons */
+.prod-description-rate dl{
+	color: var(--ctheme-c-red);
+}
+
+
+/* -- remove extra information of the product*/
+.prod-description-rate dd span:last-child,
+.prod-description-rate dt, 
+.product form, 
+.product a{ 
+display: none;
+}
+
+.product footer{
+	display: flex;
+	gap:1em;
+	justify-content: flex-end;
 	
 }
 
-/* ------ PRODUCT FILTERS */
+
+/* ::::::::::::::::::::::::::::::::::::::::::: 
+                   PAGINATION 
+:::::::::::::::::::::::::::::::::::::::::: */
+
+.pagination, .pages{
+	display: flex;
+}
+
+.pagination {
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	padding: 0 1em;
+	background-color: rgb(255, 255, 255);
+}
+
+.pagination p{
+	align-self: flex-start;
+	font-size: 0.8em;
+}
+.pages{
+	flex: 1 1 auto;
+	justify-content: space-between;
+	gap: 1em;
+	font-size: 1.5em ;
+}
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 @media screen and (min-width: 40em) {
 	
