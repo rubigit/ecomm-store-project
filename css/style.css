@@ -20,7 +20,7 @@ html, body {
 
 body {
   margin:0; 
-	background-color: rgb(0, 0, 0);
+	background-color: rgba(171, 171, 172, 0.863);
 }
 
 *, *::before, *::after {
@@ -273,9 +273,11 @@ nav .legal {
 
 
 
+/* ===================================================
+						MAIN
+   =================================================== */
 
-/* ------------------ */
-/* polaroid */
+/* ---header container for main onsale product-------    */
 .heading{
 	color:var(--clor-white);
 	font-size: 1.3em;
@@ -285,6 +287,7 @@ nav .legal {
 	position: relative;
 }
 
+/* --- General font style for elements inside header container ---   */
 .heading * { 
 	font-size: inherit;
 	font-family:inherit;
@@ -292,13 +295,14 @@ nav .legal {
 	text-align: inherit;
 }
 
-/* photo */
+/* photo main on sale item */
 .img-onsale{
 	/* display: block; */
 	/* border-bottom: 0.03em solid rgb(0, 0, 0); */
 }
 
-/* caption */
+/* ======= Discount offer description =======  */
+/* --- Container to overlay the offer description over the on sale item picture */
 .bg-onsale-pgraph{
 	
 	align-items:center;
@@ -312,7 +316,7 @@ nav .legal {
 	position: absolute;		
 	/* border: 0.03em solid rgb(95, 212, 187); */
 }
-
+/* ---catch pharse grey */
 .onsale-pgraph {
     color:var(--ctheme-dawn);
 	line-height:0.7;
@@ -320,6 +324,7 @@ nav .legal {
 	0 0 0.05em var(--clor-black),
 	0 0 0.07em rgb(221, 221, 221);
 }
+/* ---catch pharse blue */
 .onsale-pgraph span{
     color:var(--ctheme-malibu);
     text-shadow: 
@@ -329,19 +334,19 @@ nav .legal {
 	0 0 0.5em rgba(92, 90, 200, 0.6);
 }
 
-
+/* -- onsale cathegory paragraph*/
 .onsale-cagory {
 	font-size: 0.6em;
 	padding: var(--common-padding) 0;
 }
-
+/* -- highlight text from onsale cathegory paragraph*/
 .onsale-cagory span:nth-child(even){
 	color: var(--ctheme-c-red);
 	font-family:var(--fnt-exo2);
 	padding-left:0.3em;
 	text-transform: uppercase;
 }
-
+/* -- on sale shop now botton */
 .btn-onsale{
 	width: 100px;
 	height: 30px;
@@ -353,22 +358,20 @@ nav .legal {
 
 /* ::::::::::::::::::::::::::::::::::::::::::: */
 /* :::::::::::::::::::::::::::::::::::::::::: */
-.
-.products{
-	/* padding: 0 0.5em; */
-}
 
+/* -- Add shadow to all image products */
 .product img {
   box-shadow: -0.2em 0.2em 0.2em grey; 
   max-width: 100%;
 }
 
+/* -- Main container for filters */
 .filters{
 	display:flex;
 	justify-content: flex-end;
 	align-items: flex-end;
 	padding: 0 1em;
-	background-color: rgb(228, 193, 193);
+
 }
 
 .filter-form{
@@ -439,7 +442,6 @@ display: none;
 	.products{
 	 display:grid;
 	 grid-template-columns: 15em auto;
-	 
 	}
 
 	.heading {
@@ -453,9 +455,7 @@ display: none;
 	}
 	
 
-	.results {
 
-	}
 	
 	.pagination {
 		grid-column: 2;
