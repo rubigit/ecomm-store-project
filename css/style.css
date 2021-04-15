@@ -49,6 +49,13 @@ html {
     /*VAR FONTS*/
 --fnt-nuni: Nunito, Verdana, Geneva, Tahoma, sans-serif;
 --fnt-exo2:'Exo 2',Arial, Helvetica, sans-serif;
+    /*VAR FONTS SIZE*/
+--fsize-xs:0.6em;
+--fsize-s:0.8em;
+--fsize-reg:1em;
+--fsize-l:1.2em;
+--fsize-xl:1.4em;
+--fsize-xxl:1.5em;
    /*VAR COLORS*/
 --ctheme-c-red:#E3396A;
 --ctheme-dawn:#999897;
@@ -79,10 +86,10 @@ ul, ol {
 .page-header {
 	align-items: center;
 	background-color: var(--clor-black);
-	color:var(--clor-silver);
 	display: grid;
+	color:var(--clor-silver); 
 	font-family:var(--fnt-nuni);
-	font-size:1.1em;
+	font-size:var(--fsize-reg);
 	gap:var(--common-gap);
 	grid-template-columns: 1fr auto auto;
 	grid-template-areas: 
@@ -93,6 +100,8 @@ ul, ol {
 	width:auto;
 	max-width: 100%;
 }
+/* ----------------------------------------------- */
+
 /* ---------- HEADER GRID ITEMS ----------  */
 /* --- logo */
 .logo {
@@ -101,23 +110,46 @@ ul, ol {
   max-width: 7em;
 }
 
-/* --- your-products, FLEX CONTAINER  */
+/* ========  LIKE AND SHOPPING CART ======= */
+
+/* --- like and shopping cart container*/
 .your-products {
-	color: inherit;
 	display: flex;
 	gap:var(--common-gap);
 	grid-area: prod;
-
-	
+	background-color: transparent;
 }
 
+/* --- like and shopping cart icons*/
+.your-products .material-icons{
+	font-size: var(--fsize-xxl);
+	color:var(--clor-silver);
+}
+
+/* --- like and shopping cart icons when hover*/
+.your-products .material-icons:hover {
+	color:var(--ctheme-c-red);
+}
+
+/* ========  TOGGLE BUTTON MENU ======= */
 /* --- toggle button menu*/
-.nav-toggle{
-	background-color: var(--clor-silver);
+.nav-toggle {
+	background-color: transparent;
+	border-color:var(--clor-black);
 	grid-area: menu;
 }
 
-/* --- form search, FLEX CONTAINER */
+.nav-toggle:focus {
+	border-color: var(--ctheme-malibu);
+}
+
+.nav-toggle .material-icons{
+	font-size: var(--fsize-xxl);
+	color: var(--ctheme-c-red);
+} 
+
+/* ========  SEARCH FORM ======= */
+/* --- form search container */
 .search {
 	align-items:flex-end;
 	display: flex;
@@ -127,28 +159,11 @@ ul, ol {
 	vertical-align:text-bottom;
 }
 
-/* ------------------------------------------------*/
-/* --- Nav for navigation menu items-- */
-.navigation {
-	display: none;
-}
-/* =================================================== */
-/* --- like and shopping cart icons*/
-.your-products > li .material-icons {
-	color:var(--clor-silver);
-}
-.your-products > li .material-icons:hover {
-	color:var(--ctheme-c-red);
-}
-
-/* --- Search label, FLEX CONTAINER*/
+/* --- Search label*/
 .search label {
 	align-items:inherit;
-	
 	display: flex;
 	flex: 1 1 auto;
-	font-family: inherit;
-	font-size: inherit;
 	gap:calc(var(--common-gap)*2);
 	justify-content: space-between;
 	line-height:0.7;
@@ -158,138 +173,74 @@ ul, ol {
 .ibox-srch {
 	border:none;
 	border-bottom: 0.05em solid var(--clor-white);
-	background-color: rgb(0, 0, 0);
-	color: inherit;
+	background-color: var(--clor-black);
+	color:inherit;
 	flex: 1 1 auto;
-	font-size: inherit;
-	font-family: inherit;
 	padding: 0.3em var(--common-padding);
 	width: 8em;
 }
-/* --- Search Input placeholder-- */
-.ibox-srch::placeholder{
-	color: inherit;
-	font-size:0.8em;  
-	opacity:0.9;
-}
 
-
+/* --- Search Input when focus */
 .ibox-srch:focus {
 	outline: none;
 	border-bottom: 0.05em solid var(--ctheme-c-red);
-	/* background-color: var(--clor-white); */
-}
-/* --- search button */
-.search button {
-	background-color: var(--clor-silver);
-	flex: 0 1 auto;
-	justify-self: flex-end;
 }
 
+/* --- Search Input cutomize cancel button */
 .ibox-srch:focus::-webkit-search-cancel-button {
 	-webkit-appearance: none;
-	/* position:relative; */
     height: 0.8em;
     width: 0.8em;
 	background-image: url("../img/close-x-01.svg");
 }
 
-/* ===================================================
-						FOOTER
-   =================================================== */
-/* -------------- FLEX CONTAINER FOOTER--------------- */
-.page-footer{
-	align-items:center;
-	background-color: var(--clor-silver);
-	color:var(--ctheme-dawn);
-	display: flex;
-	flex-direction: column;
-	font-size: 1em;
-	gap: calc(var(--common-gap)*2);
-	padding-top: var(--common-padding);
-	font-family:var(--fnt-nuni);
-}
-
-
-/* --------------------FOOTER FLEX ITEMS ----------------- */
-/* --- Social icons, FLEX CONTAINER */
-.logofooter img{
-	width:5em;
-}
-
-.social{
-	display: flex;	
-	gap: var(--common-gap);
-	justify-content: space-between;
-}
-
-/* --- Social icons items, FLEX CONTAINER*/
-.social li a {
-	align-items: center;
+/* --- Search Input placeholder-- */
+.ibox-srch::placeholder{ 
+	opacity:0.9;
 	color: inherit;
-	display: flex;
-	flex-direction: column;
-	font-size: inherit;
-	font-family:inherit;
-	gap: var(--common-gap);
+	font-size: var(--fsize-s);
 }
 
-/* --- Nav legal, FLEX CONTAINER*/
-nav .legal {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	/* gap: var(--common-gap); */
+/* --- search button*/
+.search button {
+	background-color: transparent;
+	border-color: var(--clor-black);
+	flex: 0 1 auto;
+	justify-self: flex-end;
 }
-   
-/* --- Text anchor legal items, FLEX CONTAINER*/
-.legal > li a {
-	display: flex;
-	color:inherit;
-	flex-direction: column;
-	font-size: inherit;
-	font-family:inherit;
-	text-decoration: underline;
-	padding:calc(var(--common-padding)/3.33) 0;
-
+/* --- search button icon*/
+.search button .material-icons{
+	font-size: var(--fsize-xxl);
+	color: var(--ctheme-c-red);
+} 
+/* --- search button icon when focus*/
+.search button:focus {
+border-color: var(--ctheme-malibu);
 }
 
-/* --- Slash division for anchor legal items*/
-.legal > li:nth-child(even){
-	color:var(--clor-black);
-	padding: calc(var(--common-padding)/3.33) var(--common-padding);
+/* ========  NAVIGATION MENU ======= */
+/* ------------------------------------------------*/
+/* --- Nav for navigation menu items-- */
+.navigation {
+	display: none;
 }
-
-/* copyRights information  */
-.copyright {
-	background-color: var(--clor-black);
-	color:var(--clor-white);
-	font-size: 0.9em;
-	font-family:inherit;
-	padding:calc(var(--common-padding)*1.5) 0;
-	width:100%;
-	text-align: center;
-}
-
-
 
 /* ===================================================
 						MAIN
    =================================================== */
-/* -------------------------------------------------------
-				MAIN HEADER ITEM ON SALE
-------------------------------------------------------- */
+
+/* ----------------MAIN HEADER ITEM ON SALE---------- */
 /* ---header container for main onsale product-------    */
 .heading{
 	color:var(--clor-white);
-	font-size: 1.3em;
+	font-size: var(--fsize-xl);
 	font-family:var(--fnt-nuni);
 	font-weight:lighter;
 	text-align: center;
 	position: relative;
 }
 
-/* --- General font style for elements inside header container ---   */
+/* --- General font style for header elements ---   */
 .heading * { 
 	font-size: inherit;
 	font-family:inherit;
@@ -299,14 +250,12 @@ nav .legal {
 
 /* photo main on sale item */
 .img-onsale{
-	/* display: block; */
-	/* border-bottom: 0.03em solid rgb(0, 0, 0); */
+
 }
 
 /* ======= Discount offer description =======  */
-/* --- Container to overlay the offer description over the on sale item picture */
+/* --- Container for offer description*/
 .bg-onsale-pgraph{
-	
 	align-items:center;
 	display: flex;
 	flex-direction: column;
@@ -316,9 +265,8 @@ nav .legal {
 	left:var(--newleft);
 	bottom: 0;
 	position: absolute;		
-	/* border: 0.03em solid rgb(95, 212, 187); */
 }
-/* ---catch pharse grey */
+/* ---cathcy phrase color grey */
 .onsale-pgraph {
     color:var(--ctheme-dawn);
 	line-height:0.7;
@@ -326,7 +274,7 @@ nav .legal {
 	0 0 0.05em var(--clor-black),
 	0 0 0.07em rgb(221, 221, 221);
 }
-/* ---catch pharse blue */
+/* ---cathcy phrase color blue */
 .onsale-pgraph span{
     color:var(--ctheme-malibu);
     text-shadow: 
@@ -338,7 +286,7 @@ nav .legal {
 
 /* -- onsale cathegory paragraph*/
 .onsale-cagory {
-	font-size: 0.6em;
+	font-size: var(--fsize-xs);
 	padding: var(--common-padding) 0;
 }
 /* -- highlight text from onsale cathegory paragraph*/
@@ -350,10 +298,10 @@ nav .legal {
 }
 /* -- on sale shop now botton */
 .btn-onsale{
-	width: 100px;
-	height: 30px;
+	width: 8em;
+	height: auto;
 	background-color: rgba(166, 243, 23, 0.7);
-	font-size: 0.7em;
+	font-size: var(--fsize-xs);
 	color: azure;
 }
 
@@ -368,7 +316,7 @@ nav .legal {
 	align-items: flex-end;
 	padding: 0.5em 1em;
 	flex-direction: column;
-	gap: 1em
+	gap: 1em;
 }
 
 .filter-options{
@@ -379,7 +327,7 @@ nav .legal {
 }
 
 .filter-options fieldset, .filters h2{
-display: none;
+	display: none;
 }
 
 /* ::::::::::::::::::::::::::::::::::::::::::: 
@@ -388,7 +336,6 @@ display: none;
 
 .results {
 	background-color: rgb(255, 255, 255);
-	/* border: 0.5em solid rgb(255, 238, 0); */
 	padding:0 1em;
 }
 
@@ -403,9 +350,9 @@ display: none;
 
 .subheading {
 	line-height:0.9;
-		color: red;
-		font-size: 1.5em;
-		border:0.03em solid black;
+	color: red;
+	font-size: 1.5em;
+	border:0.03em solid black;
 }
 
 .sort-options {
@@ -539,6 +486,89 @@ display: none;
 	gap: 1em;
 	font-size: 1.5em ;
 }
+
+
+/* ===================================================
+						FOOTER
+   =================================================== */
+/* -------------- FLEX CONTAINER FOOTER--------------- */
+.page-footer{
+	align-items:center;
+	background-color: var(--clor-silver);
+	color:var(--ctheme-dawn);
+	display: flex;
+	flex-direction: column;
+	font-size: 1em;
+	gap: calc(var(--common-gap)*2);
+	padding-top: var(--common-padding);
+	font-family:var(--fnt-nuni);
+}
+
+
+/* --------------------FOOTER FLEX ITEMS ----------------- */
+/* --- Social icons, FLEX CONTAINER */
+.logofooter img{
+	width:5em;
+}
+
+.social{
+	display: flex;	
+	gap: var(--common-gap);
+	justify-content: space-between;
+}
+
+/* --- Social icons items, FLEX CONTAINER*/
+.social li a {
+	align-items: center;
+	color: inherit;
+	display: flex;
+	flex-direction: column;
+	font-size: inherit;
+	font-family:inherit;
+	gap: var(--common-gap);
+}
+
+/* --- Nav legal, FLEX CONTAINER*/
+nav .legal {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* gap: var(--common-gap); */
+}
+   
+/* --- Text anchor legal items, FLEX CONTAINER*/
+.legal > li a {
+	display: flex;
+	color:inherit;
+	flex-direction: column;
+	font-size: inherit;
+	font-family:inherit;
+	text-decoration: underline;
+	padding:calc(var(--common-padding)/3.33) 0;
+
+}
+
+/* --- Slash division for anchor legal items*/
+.legal > li:nth-child(even){
+	color:var(--clor-black);
+	padding: calc(var(--common-padding)/3.33) var(--common-padding);
+}
+
+/* copyRights information  */
+.copyright {
+	background-color: var(--clor-black);
+	color:var(--clor-white);
+	font-size: 0.9em;
+	font-family:inherit;
+	padding:calc(var(--common-padding)*1.5) 0;
+	width:100%;
+	text-align: center;
+}
+
+
+
+
+
 
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
