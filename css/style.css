@@ -474,16 +474,16 @@ display: none;
 	border:0;
 }
 .product-like{
-	background-image: url("/img/like-icon1-01.svg");
+	background-image: url("../img/like-icon1-01.svg");
 }
 .product-like:focus{
-	background-image: url("/img/like-icon1-02-02.svg");
+	background-image: url("../img/like-icon1-02-02.svg");
 }
 .product-cart{
-	background-image: url("/img/cart-icon1-01_shopping-cart-01.svg");
+	background-image: url("../img/cart-icon1-01_shopping-cart-01.svg");
 }
 .product-cart:focus{
-	background-image: url("/img/cart-icon1-02_shopping-cart-02.svg");
+	background-image: url("../img/cart-icon1-02_shopping-cart-02.svg");
 }
 
 .produc-icon-text {
