@@ -370,15 +370,10 @@ nav .legal {
 	display:flex;
 	justify-content: flex-end;
 	align-items: flex-end;
-	padding: 0 1em;
-
-}
-
-.filter-form{
-	display: flex;
+	padding: 0.5em 1em;
 	flex-direction: column;
-	gap: 1em;
-	padding: 0.5em 0;
+	gap: 1em
+
 }
 
 .filter-options{
@@ -388,7 +383,7 @@ nav .legal {
 	
 }
 
-.filter-options fieldset, .filter-form h2{
+.filter-options fieldset, .filters h2{
 display: none;
 }
 
@@ -471,7 +466,7 @@ display: none;
 		display: none;
 	}
 
-	.filter-form h2{
+	.filters h2{
 		display: block;
 	}
 
