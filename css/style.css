@@ -468,6 +468,7 @@ display: none;
 }
 
 .product-like, .product-cart{
+	background-color: transparent;
 	background-repeat:no-repeat;
 	width:var(--dimsize);
 	height:var(--dimsize) ;
