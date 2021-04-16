@@ -346,9 +346,9 @@ border-color: var(--ctheme-malibu);
 	font-size: var(--fsize-reg);
 	display:flex;
 	justify-content: flex-end;
-	padding: 0.5em 1em;
+	padding: calc(var(--common-padding) /2) var(--common-padding);
 	flex-direction: column;
-	gap: 1em;
+	gap: calc(var(--common-gap) *2);
 	background-color:var(--clor-wsmoke);
 }
 
@@ -391,7 +391,7 @@ border-color: var(--ctheme-malibu);
 
 .results {
 	background-color: var(--clor-wsmoke);
-	padding:0 1em;
+	padding:0 var(--common-padding);
 	color:var(--ctheme-dawn);
 	font-size: var(--fsize-reg);
 	font-family: var(--fnt-nuni);
@@ -402,8 +402,8 @@ border-color: var(--ctheme-malibu);
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-direction: column;
-	gap:0.5em;
-	padding: 0.5em 0;
+	gap:var(--common-gap);
+	padding: calc(var(--common-padding) /2) 0;
 	color:var(--ctheme-malibu);
 	font-size: var(--fsize-xxl);
 	font-family: var(--fnt-exo2);
@@ -418,7 +418,7 @@ border-color: var(--ctheme-malibu);
 .sort-options {
 	color: var(--ctheme-dawn);
 	display: flex;
-	gap: 0.5em;
+	gap: var(--common-gap);
 	font-size: var(--fsize-s);
 	border:0;
 }
@@ -437,7 +437,7 @@ border-color: var(--ctheme-malibu);
 .product{
 	display: flex;
 	flex-direction: column;
-	gap:0.5em;
+	gap:var(--common-gap);
 	padding: var(--common-padding) 0;
 	font-family: inherit;
 	/* border:0.3em solid red; */
@@ -446,7 +446,7 @@ border-color: var(--ctheme-malibu);
 	/* background-color: rgb(73, 226, 142); */
 	display:flex;
 	flex-direction: column;
-	gap:1em;
+	gap:calc(var(--common-gap) *2);
 	
 	/* border:0.3em solid red; */
 }
@@ -518,7 +518,7 @@ display: none;
 
 .product footer{
 	display: flex;
-	gap:1em;
+	gap:calc(var(--common-gap) *2);
 	justify-content: flex-end;
 }
 
@@ -559,8 +559,8 @@ display: none;
 .pagination {
 	flex-direction: column;
 	align-items: center;
-	gap: 1em;
-	padding: 1em 1em;
+	gap: calc(var(--common-gap) *2);
+	padding: var(--common-padding);
 	background-color: var(--clor-wsmoke);
 	font-family: var(--fnt-nuni);
 	color: var(--ctheme-dawn);
@@ -574,7 +574,7 @@ display: none;
 .pages {
 	flex: 1 1 auto;
 	justify-content: space-between;
-	gap: 1em;
+	gap: calc(var(--common-gap) *2);
 	font-family: inherit;
 	color: var(--clor-dim-gray);
 	height: 2em;
@@ -713,9 +713,9 @@ nav .legal {
 	.filter-options fieldset{
 		border: none;
 		display: flex;
-		gap: 1em;
+		gap: calc(var(--common-gap) *2);
 		flex: 1 1 auto;
-		padding: 1em ;
+		padding: var(--common-padding);
 		}
 
 	.filter-options legend{
