@@ -72,7 +72,7 @@ html {
 /* VAR PADDGINS MARGINS */
 --common-gap: 0.5em;
 --common-padding:1em;
---common-bradius:0.4em;
+--common-bradius:0.2em;
 --newleft:35%; /* -- to calulate left value for a absolute item*/
 --dimsize: 2em;
 
@@ -591,7 +591,7 @@ display: none;
 .pages li:hover{
 	background-color: var(--ctheme-c-red);
 	box-shadow: 0 0.2em 1em rgb(195, 195, 195);
-	border-radius: 0.2em;
+	border-radius: var(--common-bradius);
 	color:whitesmoke;
 	font-weight:bold;
 	}
