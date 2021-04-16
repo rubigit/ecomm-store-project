@@ -736,28 +736,45 @@ nav .legal {
 		gap:var(--common-gap);
 	}
 
-	input[type="checkbox"]{
+
+
+
+	input[type="checkbox"], input[type="radio"] {
 		display: none;
+	}
+
+	input[type=checkbox] + label, input[type=checkbox]:checked + label {
+		background-repeat: no-repeat;
+		text-align: left;
+		padding-left:calc(var(--common-padding) * 2);
+		cursor: pointer;
 	}
 
 	input[type=checkbox] + label {	
 		background-image: url("../img/check-icon-01-01.svg");
-		background-repeat: no-repeat;
-		text-align: left;
-		padding-left:calc(var(--common-padding) * 2);
-		cursor: pointer;
 	}
 
 	input[type=checkbox]:checked + label {	
 		background-image: url("../img/check-icon-02-02.svg");
-		background-repeat: no-repeat;
-		text-align: left;
-		padding-left:calc(var(--common-padding) * 2);
+	}
+	
+	input[type=radio] + label {
+		color: var(--ctheme-c-red);
 		cursor: pointer;
 	}
-	.filter-list input[type="radio"] {
-	display: none;
+
+	input[type=radio]:checked + label{
+		color: var(--ctheme-malibu);
+		cursor: default;
 	}
+
+	.filter-list .material-icons{
+		color: inherit;
+	}
+
+
+
+
 	.pagination {
 		grid-column: 2;
 	}
