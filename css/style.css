@@ -139,6 +139,7 @@ ul, ol {
 	background-color: transparent;
 	border-color:var(--clor-black);
 	grid-area: menu;
+	cursor: pointer;
 }
 
 .nav-toggle:focus {
@@ -209,6 +210,7 @@ ul, ol {
 	border-color: var(--clor-black);
 	flex: 0 1 auto;
 	justify-self: flex-end;
+	cursor: pointer;
 }
 /* --- search button icon*/
 .search button .material-icons{
@@ -309,7 +311,7 @@ border-color: var(--ctheme-malibu);
 	color:var(--ctheme-malibu);
 	text-transform:uppercase ;
 	text-decoration-thickness: initial;
-	/* border:0.05 solid blue; */
+	cursor: pointer;
 }
 
 .btn-onsale span {
@@ -344,13 +346,37 @@ border-color: var(--ctheme-malibu);
 	padding: 0.5em 1em;
 	flex-direction: column;
 	gap: 1em;
+	background-color:var(--clor-wsmoke);
 }
 
 .filter-options{
 	display: flex;
 	flex-direction: column;
 	gap: calc(var(--common-padding)/2);
+	
 }
+
+
+.filter-opt-button {
+	background-color: transparent;
+  	background-image: url("../img/filter-icon-01-01.svg");
+  	background-repeat: no-repeat;
+  	font-size: var(--fsize-l);
+	font-family: var(--fnt-exo2);
+	color: var(--clor-dim-gray);
+  	padding-left:calc(var(--common-padding) * 1.5);
+  	text-align: left;
+  	opacity: 0.6;
+	border:0;
+	margin: var(--common-gap) 0;
+	cursor: pointer;
+}
+
+.filter-opt-button:focus{
+	background-image: url("../img/filter-icon-02-02.svg");
+	opacity:1;
+}
+
 
 .filter-options fieldset, .filters h2{
 	display: none;
@@ -397,6 +423,8 @@ border-color: var(--ctheme-malibu);
 .sort-options select{
 	font-size: var(--fsize-xs);
 	color:inherit;
+	outline: none;
+	cursor: pointer;
 }
 
 /* ::::::::::::::::::::::::::::::::::::::::::: 
@@ -497,6 +525,7 @@ display: none;
 	width:var(--dimsize);
 	height:var(--dimsize) ;
 	border:0;
+	cursor: pointer;
 }
 .product-like{
 	background-image: url("../img/like-icon1-01.svg");
@@ -706,6 +735,8 @@ nav .legal {
 		flex-direction: column;
 		gap:var(--common-gap);
 	}
+
+
 
 	.filter-list input[type="radio"] {
 	display: none;
