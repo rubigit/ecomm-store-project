@@ -100,6 +100,7 @@ ul, ol {
 	padding:var(--common-padding) calc(var(--common-padding)*1.5);
 	width:auto;
 	max-width: 100%;
+	padding-bottom: var(--common-padding);
 }
 /* ----------------------------------------------- */
 
@@ -234,7 +235,7 @@ border-color: var(--ctheme-malibu);
 /* ---header container for main onsale product-------    */
 .heading{
 	color:var(--clor-white);
-	font-size: var(--fsize-xl);
+	font-size: var(--fsize-reg);
 	font-family:var(--fnt-nuni);
 	font-weight:lighter;
 	text-align: center;
@@ -251,7 +252,6 @@ border-color: var(--ctheme-malibu);
 
 /* photo main on sale item */
 .img-onsale{
-
 }
 
 /* ======= Discount offer description =======  */
@@ -269,6 +269,7 @@ border-color: var(--ctheme-malibu);
 }
 /* ---cathcy phrase color grey */
 .onsale-pgraph {
+	font-size: var(--fsize-xl);
     color:var(--ctheme-dawn);
 	line-height:0.7;
     text-shadow: 
@@ -297,13 +298,36 @@ border-color: var(--ctheme-malibu);
 	text-transform: uppercase;
 }
 /* -- on sale shop now botton */
-.btn-onsale{
+.btn-onsale {
 	width: 8em;
 	height: auto;
-	background-color: rgba(166, 243, 23, 0.7);
+	padding: calc(var(--common-padding)/2) calc(var(--common-padding)/2);
+	background-color:var(--clor-dim-gray);
+	font-family:var(--fnt-nuni) ;
 	font-size: var(--fsize-xs);
-	color: azure;
+	font-weight: bolder;
+	color:var(--ctheme-malibu);
+	text-transform:uppercase ;
+	text-decoration-thickness: initial;
+	/* border:0.05 solid blue; */
 }
+
+.btn-onsale span {
+	font-size: inherit;
+	text-decoration: underline;
+	text-decoration-thickness: inherit;
+	text-underline-position: under;
+	font-weight: bolder;
+
+}
+
+.btn-onsale:hover{
+	color:#8fdbfb;
+	text-decoration-thickness: 0.25em;
+
+	
+}
+
 
 
 /* ::::::::::::::::::::::::::::::::::::::::::: 
