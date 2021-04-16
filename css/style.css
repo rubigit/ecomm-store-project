@@ -736,8 +736,25 @@ nav .legal {
 		gap:var(--common-gap);
 	}
 
+	input[type="checkbox"]{
+		display: none;
+	}
 
+	input[type=checkbox] + label {	
+		background-image: url("../img/check-icon-01-01.svg");
+		background-repeat: no-repeat;
+		text-align: left;
+		padding-left:calc(var(--common-padding) * 2);
+		cursor: pointer;
+	}
 
+	input[type=checkbox]:checked + label {	
+		background-image: url("../img/check-icon-02-02.svg");
+		background-repeat: no-repeat;
+		text-align: left;
+		padding-left:calc(var(--common-padding) * 2);
+		cursor: pointer;
+	}
 	.filter-list input[type="radio"] {
 	display: none;
 	}
