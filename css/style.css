@@ -375,13 +375,14 @@ border-color: var(--ctheme-malibu);
 	cursor: pointer;
 }
 
-.filter-opt-button:focus{
+.filter-opt-button:hover {
 	background-image: url("../img/filter-icon-02-02.svg");
 	opacity:1;
 }
 
 
-.filter-options fieldset, .filters h2{
+
+.filter-options fieldset, .filters h2 {
 	display: none;
 }
 
