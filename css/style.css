@@ -860,6 +860,10 @@ nav .legal {
 	.heading{ font-size: var(--fsize-xl);}  
 	.onsale-cagory , .btn-onsale {font-size: var(--fsize-s);}
 
+	.page-header {font-size:var(--fsize-l); }
+	.pagination {font-size: var(--fsize-xxl);}
+
+
 	.logo {max-width: 9em;}
 
 	.nav-toggle{
@@ -943,7 +947,7 @@ nav .legal {
 	}
 	.submenu li a{
 		background: rgb(63, 63, 63);	
-		color: var(--ctheme-malibu);
+		color: ma;
 		text-align: left;
 		padding: 0.5em;
 	}
@@ -957,7 +961,7 @@ nav .legal {
 	.products{
 		display:block;
 	   }
-.filters{
+	.filters{
 	background-color: var(--clor-wsmoke);
 	
 	align-items: stretch;
@@ -996,7 +1000,7 @@ nav .legal {
 		--fsize-xxxl:2.5em;
 		--fsize-xxl:1.7em;
   }
- 
+  .page-header {font-size:var(--fsize-xl); }
   .onsale-cagory , .btn-onsale {font-size: var(--fsize-l);}
   
   .filters{ font-size: var(--fsize-reg);}
@@ -1040,10 +1044,11 @@ nav .legal {
 	.delete{
 		color:rgb(247, 183, 255);
 	}
+	
+	.page-header {font-size:var(--fsize-xxl); }
 	.logo {max-width: 11em;}
 
 	.menu li{
 		font-size: var(--fsize-l);
-		
 		}
 }
