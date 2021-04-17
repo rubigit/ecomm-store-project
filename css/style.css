@@ -157,12 +157,12 @@ ul, ol {
 /* ========  SEARCH FORM ======= */
 /* --- form search container */
 .search {
-	align-items:flex-end;
+	align-items:center;
 	display: flex;
     grid-area: srch;
 	gap:calc(var(--common-gap)*2);
 	justify-content: space-between;
-	vertical-align:text-bottom;
+	/* vertical-align:text-bottom; */
 }
 
 /* --- Search label*/
@@ -693,6 +693,10 @@ nav .legal {
 							MEDIA QUERY
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 @media screen and (min-width: 20em) {
+
+	.delete{
+		color:rgb(0, 0, 0);
+	}
 	html{
 		  /*VAR FONTS SIZE*/
 --fsize-xs:0.6em;
@@ -706,6 +710,9 @@ nav .legal {
 
 
 @media screen and (min-width: 28em) {
+	.delete{
+		color:rgb(238, 16, 16);
+	}
 	.heading{ font-size: var(--fsize-l);}
 
 	.onsale-pgraph {font-size: var(--fsize-xxl);}
@@ -714,6 +721,10 @@ nav .legal {
 }
 
 @media screen and (min-width: 40em) {
+
+	.delete{
+		color:rgb(142, 238, 16);
+	}
 	html{--fsize-xxxl:1.8em;}
 
 	.heading{ font-size: var(--fsize-l);}
@@ -808,7 +819,113 @@ nav .legal {
 		color: inherit;
 	}
 
-	
+  }
+  @media screen and (min-width: 50em) {
+	.delete{
+		color:rgb(231, 16, 238);
+	}
+	.nav-toggle{
+		display: none;
+	}
 
+	/* .page-header {
+		background-color: white;
+	} */
+
+
+	.navigation {
+		display: flex;
+		color: burlywood;
+		grid-area: nav;
+		background: rgb(174, 243, 105);
+		height: auto;
+		max-height: fit-content;
+		align-items: center;
+		justify-content: space-between;
+		padding: 2em;
+		
+	}
+
+	.navigation *{
+		/* color: inherit; */
+	}
+
+	.menu{
+		background: rgb(146, 180, 111);
+		display: flex;
+		flex:1 1 auto;
+		justify-content: space-evenly;
+		gap:1em /* --saparate menus between each others */
+		
+
+		
+	}
+
+	.menu li{
+		display:flex;
+		flex-direction: column;
+		border:0.2em solid rgb(255, 255, 255);
+		gap:1em;   /* --- separate Menu from submenu */
+		flex:1 1 auto;
+		
+	}
+	
+	.menu li a{
+		background: rgb(202, 35, 224);
+		padding:0.3em;
+		text-align: center;
+		
+
+
+	}
+
+	.submenu{
+		border:0.1em solid rgb(255, 255, 255);
+		background-color: yellow;
+		display:flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap:1em;  /* separate submenu items */
+		padding-left: 4em; /* -- move the items to the right */
+
+		
+		
+	}
+	
+	.submenu li{
+		border:0.03em solid rgb(240, 100, 100);
+		/* padding-left: 1em; */
+		flex:1 1 auto
+	}
+	.submenu li a{
+		background: rgb(0, 0, 0);	
+		color: chartreuse;
+		text-align: left;
+		padding-left: 1em;
+	}
+
+
+
+
+
+	.page-header {
+	grid-template-columns: 1fr 1fr auto;
+	grid-template-areas: 
+	"logo srch prod"
+	"nav nav nav";
+	}
+/* delete this */
+	.logo,
+	.search,
+	.your-products,
+	.navigation{ 
+		border:0.03em solid rgb(146, 146, 146);
+	}
+	
   }
 
+  @media screen and (min-width: 70em) {
+	.delete{
+		color:rgb(137, 105, 228);
+	}
+  }
