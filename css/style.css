@@ -829,13 +829,7 @@ nav .legal {
 	          GRID FOR HEADER 
 	::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
-	.page-header,	
-	.products
-	{
-		width:auto;
-		max-width: 90%;
-		margin: 0 auto;
-	}
+
 
 	.page-header {
 		grid-template-columns: 1fr 1fr auto;
@@ -1016,13 +1010,6 @@ nav .legal {
 	.filter-options{
 		padding-right: 5em;
 	}
-.page-header,	
-.products
-{
-	width:auto;
-    max-width: 95%;
-    margin: 0 auto;
-}
 
 
 	.results{
