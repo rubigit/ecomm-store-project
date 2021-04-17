@@ -926,12 +926,27 @@ nav .legal {
 	}
 
 
+	/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	MAIN  (products)
+	:::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+	.products{
+		display:block;
+	   }
+	.results{
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		gap: calc(var(--common-gap)*3);
+	}
+
+	.results-hding {
+		grid-column: 1 / span 2;
+	}
 	
-
-
-
-
-	
+	.sort-options{
+		align-self: flex-end;
+	}
   }
 
   @media screen and (min-width: 70em) {
