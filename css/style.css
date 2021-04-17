@@ -178,7 +178,7 @@ ul, ol {
 /* --- Search Input*/
 .ibox-srch {
 	border:none;
-	border-bottom: 0.05em solid var(--clor-white);
+	border-bottom: 0.05em solid var(--ctheme-c-red);
 	background-color: var(--clor-black);
 	color:inherit;
 	flex: 1 1 auto;
@@ -189,7 +189,7 @@ ul, ol {
 /* --- Search Input when focus */
 .ibox-srch:focus {
 	outline: none;
-	border-bottom: 0.05em solid var(--ctheme-c-red);
+	border-bottom: 0.05em solid var(--ctheme-malibu);
 }
 
 /* --- Search Input cutomize cancel button */
