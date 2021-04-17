@@ -842,12 +842,7 @@ nav .legal {
 		max-height: fit-content;
 		align-items: center;
 		justify-content: space-between;
-		padding: 2em;
-		
-	}
-
-	.navigation *{
-		/* color: inherit; */
+		padding: 2em 4em;
 	}
 
 	.menu{
@@ -856,9 +851,6 @@ nav .legal {
 		flex:1 1 auto;
 		justify-content: space-evenly;
 		gap:1em /* --saparate menus between each others */
-		
-
-		
 	}
 
 	.menu li{
@@ -867,45 +859,37 @@ nav .legal {
 		border:0.2em solid rgb(255, 255, 255);
 		gap:1em;   /* --- separate Menu from submenu */
 		flex:1 1 auto;
-		
+	}
+
+	.menu li:hover .submenu{
+		display: flex;
 	}
 	
 	.menu li a{
 		background: rgb(202, 35, 224);
 		padding:0.3em;
 		text-align: center;
-		
-
-
 	}
 
 	.submenu{
+		display:none;
 		border:0.1em solid rgb(255, 255, 255);
 		background-color: yellow;
-		display:flex;
 		flex-direction: column;
 		justify-content: space-between;
-		gap:1em;  /* separate submenu items */
-		padding-left: 4em; /* -- move the items to the right */
-
-		
-		
+		gap:1em;  /* separate submenu items */	
 	}
 	
 	.submenu li{
 		border:0.03em solid rgb(240, 100, 100);
-		/* padding-left: 1em; */
 		flex:1 1 auto
 	}
 	.submenu li a{
 		background: rgb(0, 0, 0);	
 		color: chartreuse;
 		text-align: left;
-		padding-left: 1em;
+		padding: 0.5em;
 	}
-
-
-
 
 
 	.page-header {
