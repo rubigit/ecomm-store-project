@@ -821,6 +821,21 @@ nav .legal {
 
   }
   @media screen and (min-width: 50em) {
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	          GRID FOR HEADER 
+	::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+	.page-header {
+		grid-template-columns: 1fr 1fr auto;
+		grid-template-areas: 
+		"logo srch prod"
+		"nav nav nav";
+		}
+	
+
+	/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	NAGIVATION MENU
+	:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 	.delete{
 		color:rgb(231, 16, 238);
 	}
@@ -837,7 +852,7 @@ nav .legal {
 		display: flex;
 		color: burlywood;
 		grid-area: nav;
-		background: rgb(174, 243, 105);
+		/* background: rgb(174, 243, 105); */
 		height: auto;
 		max-height: fit-content;
 		align-items: center;
@@ -846,65 +861,76 @@ nav .legal {
 	}
 
 	.menu{
-		background: rgb(146, 180, 111);
+		background: rgb(51, 51, 51);
 		display: flex;
 		flex:1 1 auto;
 		justify-content: space-evenly;
-		gap:1em /* --saparate menus between each others */
+		gap:1em; /* --saparate menus between each others */
+		padding:calc(var(--common-padding)/2);
+		border-radius: var(--common-bradius);
 	}
 
 	.menu li{
 		display:flex;
 		flex-direction: column;
-		border:0.2em solid rgb(255, 255, 255);
+		/* border:0.2em solid rgb(255, 255, 255); */
 		gap:1em;   /* --- separate Menu from submenu */
 		flex:1 1 auto;
+		font-family: var(--fnt-nuni);
+		font-size: var(--fsize-reg);
 	}
 
 	.menu li:hover .submenu{
 		display: flex;
 	}
+	.menu li a:hover{
+		color: var(--ctheme-malibu);
+		font-weight: bolder;
+		text-decoration: underline;
+		text-underline-position: under;
+		text-decoration-thickness: 0.25em;
+	}
 	
 	.menu li a{
-		background: rgb(202, 35, 224);
+		/* background: rgb(202, 35, 224); */
 		padding:0.3em;
 		text-align: center;
+		color: var(--clor-wsmoke);
 	}
 
 	.submenu{
 		display:none;
-		border:0.1em solid rgb(255, 255, 255);
-		background-color: yellow;
+		border:0.1em solid var(--ctheme-malibu);
+		background-color: #77CDF3;
 		flex-direction: column;
 		justify-content: space-between;
-		gap:1em;  /* separate submenu items */	
+		gap:0.2em; 
+		 /* separate submenu items */	
 	}
 	
 	.submenu li{
-		border:0.03em solid rgb(240, 100, 100);
+		/* border:0.03em solid rgb(240, 100, 100); */
 		flex:1 1 auto
+	}
+
+	.submenu li a:hover{
+		color:#9fe1fd;
+		text-decoration:none ;
+		background-color:var(--clor-dim-gray);
 	}
 	.submenu li a{
 		background: rgb(0, 0, 0);	
-		color: chartreuse;
+		color: rgb(157, 235, 171);
 		text-align: left;
 		padding: 0.5em;
 	}
 
 
-	.page-header {
-	grid-template-columns: 1fr 1fr auto;
-	grid-template-areas: 
-	"logo srch prod"
-	"nav nav nav";
-	}
-/* delete this */
-	.logo,
-	.search,
-	.your-products,
-	.navigation{ 
-		border:0.03em solid rgb(146, 146, 146);
-	}
+	
+
+
+
+
 	
   }
 
