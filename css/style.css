@@ -711,6 +711,7 @@ nav .legal {
 .prd-heading-pictures{
 	display:flex;
 	justify-content: space-evenly;
+	padding: 0 calc(var(--common-padding)/2);
 }
 
 
