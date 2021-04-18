@@ -701,7 +701,17 @@ nav .legal {
 }
 
 
+.prd-heading{
+	display:flex;
+	flex-direction: column;
+	gap:var(--common-gap);
+	padding-bottom: var(--common-padding);
+}
 
+.prd-heading-pictures{
+	display:flex;
+	justify-content: space-evenly;
+}
 
 
 
