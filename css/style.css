@@ -799,17 +799,17 @@ nav .legal {
 }
 
 .prd-description h3{
-	font-size: var(--fsize-xl);
+	font-size: var(--fsize-l);
 	font-weight: bolder;
 }
 
 h4, fieldset legend{
-	font-size: var(--fsize-l);
+	font-size: var(--fsize-reg);
 	font-weight: bold;
 }
 
 .overview-submenu a{
-	font-size: var(--fsize-l);
+	font-size: var(--fsize-reg);
 	
 }
 
