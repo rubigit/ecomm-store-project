@@ -100,23 +100,25 @@
             </dl>
             <data value="39"><del>$50.00</del><ins>$39.00</ins></data>
 
-            <fieldset class="bulb-color-options">
+            <fieldset>
                 <h4>Light bulb color:</h4>
-                <ul>
+                <ul class="bulb-color-options">
                     <li><button class="bulb-white">White</button></li>
                     <li><button class="bulb-yellow">Yellow</button></li>
                     <li><button class="bulb-rainbow">Rainbow</button></li>
                 </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="qty-field">
                 <legend>Qty</legend>
-                <ul>
-                    <li><button class="qty-minu">- min</button></li>
-                    <li><input class="qty-ibox" type="text"></li>
-                    <li><button class="qty-plus">+ plu</button></li>
-                </ul>
-                <button class="add-cart"> Add to cart</button>
+                <div class="qty-container">
+                    <ul class="qty-buttons">
+                        <li><button class="qty-minu">-</button></li>
+                        <li><input class="qty-ibox" type="text"></li>
+                        <li><button class="qty-plus">+</button></li>
+                    </ul>
+                    <button class="add-cart"> Add to cart</button>
+                </div>
             </fieldset>
             <nav aria-label="Overview" class="overview">
                 <h4>Product overview</h4>
@@ -154,9 +156,9 @@
                 </ul>
             </nav>
 
-            <fieldset>
+            <fieldset class="rate-form">
                 <legend>How would you rate this item?</legend>
-                <ol class="Rate-list">
+                <ol class="rate-list">
                     <li>
                         <input type="radio" name="rate" value="4" id="Five">
                         <label for="Five">
@@ -164,6 +166,7 @@
                                 class="material-icons">star</span><span class="material-icons">star</span><span
                                 class="material-icons">star</span><span>Love it</span>
                         </label>
+
                     </li>
                     <li>
                         <input type="radio" name="rate" value="4" id="Four">

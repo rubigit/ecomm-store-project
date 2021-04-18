@@ -744,7 +744,12 @@ nav .legal {
 
 
 .prd-product{
-	padding:var(--common-padding);
+	/* padding:var(--common-padding);
+	display: grid;
+	
+	grid-template-columns: 1fr 1fr;
+	gap: var(--common-gap) */
+	/* --MEDIAQ */
 }
 
 
@@ -761,12 +766,17 @@ nav .legal {
 	justify-content: space-evenly;
 	/* padding: 0 calc(var(--common-padding)/3); */
 	flex: 1 1 auto;
+	border: 0.05em solid red;
+	align-items: center;
+	width: auto;
+	height: 4em;
 }
 
 .prd-heading-pictures img{
 	background-color: red;
-	height: 20%;
-	width: 20%;
+	height: 4em;
+	width: 4em;  
+	/* --MEDIAQ */
 }
 
 
@@ -825,9 +835,11 @@ h4, fieldset legend{
 /*  color swatches bulb-color-options*/
 
 .bulb-white, .bulb-yellow, .bulb-rainbow  {
-	font-size: var(--fsize-xl);
+	font-size: var(--fsize-reg);
 	border: none;
 	box-shadow: 0 0.2em 1em rgb(195, 195, 195);
+	height: 5em;
+	width: 5em;
 }
 
 .bulb-white {
@@ -845,11 +857,29 @@ h4, fieldset legend{
 	background-image: linear-gradient(54deg, rgba(244,40,12,1) 0%, rgba(203,195,53,1) 50%, rgba(0,212,255,1) 100%);
 }
 
+
+.bulb-color-options {
+	display:flex;
+	justify-content: space-evenly;
+}
+.bulb-color-options li{
+	padding: var(--common-padding) 0;
+}
+
+
+
+
 /*  Qty butons color style*/
 
-.qty-minu, .qty-ibox, .qty-plus, .add-cart  {
+.qty-ibox,  .add-cart  {
 	background-color: transparent;
 	font-size: var(--fsize-l);
+}
+
+.qty-minu,  .qty-plus {
+	background-color: transparent;
+	font-size: var(--fsize-xl);
+	padding: 0 var(--common-padding);
 }
 
 .qty-minu, .qty-plus {
@@ -878,6 +908,7 @@ h4, fieldset legend{
 	color: var(--clor-wsmoke);
 	background-color: var(--ctheme-c-red);
 	border-radius: calc(var(--common-bradius)*2) ;
+	padding: var(--common-padding) 0;
 	
 }
 
@@ -887,6 +918,63 @@ h4, fieldset legend{
 	box-shadow: 0 0.2em 1em rgb(195, 195, 195);
 	
 }
+
+/* Qty butons FLEX style */
+.qty-container{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	gap: var(--common-gap);
+}
+.qty-buttons {
+	display: flex;
+	justify-content: space-between;
+	flex: 1 1 auto;
+	/* border: 0.5em solid white; */
+}
+
+.add-cart {
+	flex: 1 1 auto;
+	/* border: 0.5em solid white; */
+}
+.qty-buttons li {
+	display: flex;
+	padding: var(--common-padding) 0;
+	flex-grow: 1;
+	
+}
+
+.qty-minu, .qty-plus, .qty-ibox  {
+	flex: 1 1 auto;
+}
+.qty-ibox {
+	width: 100%;
+	height: 2.5em;
+	flex-grow: 1;
+}
+
+
+
+/* -- rate options color style */
+.rate-list li label span:last-child{
+	color: var(--clor-dim-gray);
+	padding-left: var(--common-padding);
+}
+
+.rate-list, overview-menu
+{
+	padding: var(--common-padding) 0;
+}
+.overview-submenu {
+	padding: calc(var(--common-padding)/2) 0;
+}
+
+.overview-submenu li{
+	padding: calc(var(--common-padding)/2) 0;
+	padding-left: var(--common-padding);
+}
+
+
 
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
