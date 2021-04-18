@@ -696,6 +696,16 @@ nav .legal {
 +++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++++++++++ */
 
+.prd-description dd span:last-child,
+.prd-description dt{
+	display: none;
+} 
+
+.prd-description fieldset{
+	border: none;
+}
+
+
 .prd-product{
 	padding:var(--common-padding);
 }
@@ -741,10 +751,39 @@ nav .legal {
 
 .prd-description h3{
 	font-size: var(--fsize-xl);
-
+	font-weight: bolder;
 }
 
+h4, fieldset legend{
+	font-size: var(--fsize-l);
+	font-weight: bold;
+}
 
+.overview-submenu a{
+	font-size: var(--fsize-l);
+	
+}
+
+.prd-description dd{
+	color:var(--ctheme-c-red);
+}
+
+.prd-description del{
+	text-decoration:line-through;
+	padding-right: 0.5em;
+	color:var(--ctheme-c-red);
+}
+
+.prd-description ins{
+	color:var(--ctheme-malibu);
+	font-family: var(--fnt-exo2);
+	font-size: var(--fsize-xl);
+    text-shadow: 
+	0 0 0.05em var(--clor-black),
+	0 0 0.5em rgba(201, 239, 248, 0.6),
+	0 0 0.5em rgba(226, 222, 201, 0.6),
+	0 0 0.5em rgba(166, 165, 228, 0.6);
+}
 
 
 
