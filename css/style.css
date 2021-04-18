@@ -749,8 +749,6 @@ nav .legal {
 	display: grid;
 	gap: var(--common-gap);
 	
-	/* grid-template-columns: 1fr 1fr; */
-	 
 	/* --Change grid values in media query */
 }
 
@@ -769,9 +767,9 @@ nav .legal {
 	/* padding: 0 calc(var(--common-padding)/3); */
 	flex: 1 1 auto;
 	border: 0.05em solid red;
-	align-items: center;
-	width: auto;
-	height: 4em;
+	/* align-items: center; */
+	/* width: auto; */
+	/* height: 4em; */
 }
 
 .prd-heading-pictures img{
@@ -901,7 +899,7 @@ h4, fieldset legend, .overview-submenu a{
 	max-height: 100%;
 	height: 3em;
 
-	/* padding-right:calc(var(--common-padding)*5) ;   */
+	
 	/* --Media query change padding  */
 }
 
@@ -1261,7 +1259,13 @@ h4, fieldset legend, .overview-submenu a{
 	.sort-options{
 		align-self: flex-end;
 	}
+
+
   }
+
+  @media screen and (min-width: 60em) {
+	.prd-product { grid-template-columns: 1fr 1fr; }
+}
 
   @media screen and (min-width: 70em) {
 	.delete{
