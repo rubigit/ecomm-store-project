@@ -744,6 +744,8 @@ nav .legal {
 
 
 .prd-product{
+	background-color: whitesmoke;
+	padding:var(--common-padding);
 	/* padding:var(--common-padding);
 	display: grid;
 	
