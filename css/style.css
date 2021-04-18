@@ -704,20 +704,37 @@ nav .legal {
 .prd-heading{
 	display:flex;
 	flex-direction: column;
-	gap:var(--common-gap);
+	/* --separate big picture from small pictures */
+	gap:calc(var(--common-gap)*1.5);
 	padding-bottom: var(--common-padding);
 }
 
 .prd-heading-pictures{
 	display:flex;
 	justify-content: space-evenly;
-	padding: 0 calc(var(--common-padding)/2);
+	/* padding: 0 calc(var(--common-padding)/3); */
+	flex: 1 1 auto;
+}
+
+.prd-heading-pictures img{
+	background-color: red;
+	height: 20%;
+	width: 20%;
 }
 
 
 
+.prd-description {
+	display: flex;
+	flex-direction: column;
+	border:0.05em solid red;
+	gap:calc(var(--common-gap)*1.5);
+	font-family: var(--fnt-nuni);
+}
 
-
+.prd-description  button, .prd-description input {
+	font-family: inherit;
+}
 
 
 
