@@ -730,12 +730,19 @@ nav .legal {
 	border:0.05em solid red;
 	gap:calc(var(--common-gap)*1.5);
 	font-family: var(--fnt-nuni);
+	color:var(--ctheme-dawn);
+	font-size: var(--fsize-reg);
 }
 
-.prd-description  button, .prd-description input {
+.prd-description  button, .prd-description input, .overview-menu li a{
 	font-family: inherit;
+	color: inherit;
 }
 
+.prd-description h3{
+	font-size: var(--fsize-xl);
+
+}
 
 
 
