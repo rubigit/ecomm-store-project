@@ -746,15 +746,15 @@ nav .legal {
 .prd-product{
 	background-color: whitesmoke;
 	padding:var(--common-padding);
-	/* padding:var(--common-padding);
 	display: grid;
+	gap: var(--common-gap);
 	
-	grid-template-columns: 1fr 1fr;
-	gap: var(--common-gap) */
-	/* --MEDIAQ */
+	/* grid-template-columns: 1fr 1fr; */
+	 
+	/* --Change grid values in media query */
 }
 
-
+/* Pictures for the single item (big image and small pictures) */
 .prd-heading{
 	display:flex;
 	flex-direction: column;
@@ -778,11 +778,12 @@ nav .legal {
 	background-color: red;
 	height: 4em;
 	width: 4em;  
-	/* --MEDIAQ */
+	/* --Change dimension in media query */
 }
 
 
-
+/* Description of the  single item */
+/* Description parent */
 .prd-description {
 	display: flex;
 	flex-direction: column;
@@ -793,36 +794,37 @@ nav .legal {
 	font-size: var(--fsize-reg);
 }
 
+/* --inheriy font styles from the Description parent */
 .prd-description input, .overview-menu li a{
 	font-family: inherit;
 	color: inherit;
 }
 
+/* title of the item */
 .prd-description h3{
 	font-size: var(--fsize-l);
 	font-weight: bolder;
 }
 
-h4, fieldset legend{
+/* sub headings and fielset legend */
+/* --sub title for the product overview */
+h4, fieldset legend, .overview-submenu a{
 	font-size: var(--fsize-reg);
 	font-weight: bold;
 }
 
-.overview-submenu a{
-	font-size: var(--fsize-reg);
-	
-}
+/* rating information and previous price */
 
-.prd-description dd{
+.prd-description dd, .prd-description del{
 	color:var(--ctheme-c-red);
 }
 
 .prd-description del{
 	text-decoration:line-through;
 	padding-right: 0.5em;
-	color:var(--ctheme-c-red);
 }
 
+/* on sale price */
 .prd-description ins{
 	color:var(--ctheme-malibu);
 	font-family: var(--fnt-exo2);
@@ -835,7 +837,6 @@ h4, fieldset legend{
 }
 
 /*  color swatches bulb-color-options*/
-
 .bulb-white, .bulb-yellow, .bulb-rainbow  {
 	font-size: var(--fsize-s);
 	border: 0.03em solid var(--clor-silver);
@@ -845,6 +846,13 @@ h4, fieldset legend{
 	text-align: center;
 	padding: calc(var(--common-padding)/2) ;
 	background-clip: content-box;
+}
+
+.bulb-white:focus, .bulb-yellow:focus, .bulb-rainbow:focus{
+	border: 0.2em solid var(--clor-black);
+}
+.bulb-white:hover, .bulb-yellow:hover, .bulb-rainbow:hover{
+	border: 0.05em solid var(--clor-black);
 }
 
 .bulb-white {
@@ -869,7 +877,7 @@ h4, fieldset legend{
 .bulb-color-options {
 	display:flex;
 	justify-content: flex-start;
-	gap: 1em;
+	gap: calc(var(--common-gap)*2);
 }
 .bulb-color-options li{
 	padding: var(--common-padding) 0;
@@ -878,6 +886,39 @@ h4, fieldset legend{
 
 
 
+
+
+/* Qty butons FLEX style */
+.qty-container{
+	display: flex;
+	flex-wrap: wrap;
+	gap: calc(var(--common-gap)*2);
+	padding-top: var(--common-padding);
+}
+.qty-buttons {
+	display: flex;
+	flex: 1 1 auto;
+	max-height: 100%;
+	height: 3em;
+
+	/* padding-right:calc(var(--common-padding)*5) ;   */
+	/* --Media query change padding  */
+}
+
+.qty-buttons li {
+	display: flex;
+	flex-grow: 1;
+	
+}
+
+/* -- make Qty bottons to grow */
+.qty-minu, .qty-plus, .qty-ibox  {
+	flex-grow:1 ;
+	max-width: 100%;   
+	width: 1em;
+	text-align: center;
+}
+
 /*  Qty butons color style*/
 
 .qty-ibox,  .add-cart  {
@@ -885,24 +926,22 @@ h4, fieldset legend{
 	font-size: var(--fsize-l);
 }
 
-.qty-minu,  .qty-plus {
+.qty-minu, .qty-plus {
+	color: var(--clor-black);
 	background-color: transparent;
 	font-size: var(--fsize-xl);
 	padding: 0 calc(var(--common-padding)/4);
 }
 
-.qty-minu, .qty-plus {
-	color: var(--clor-black);
-}
 
 .qty-minu:focus, .qty-plus:focus {
 	color: var(--clor-wsmoke);
 	background-color: var(--ctheme-malibu);
-	/* box-shadow: 0 0.2em 1em rgb(195, 195, 195); */
-	/* border: none; */
 }
+
+
+/* Bortders for Quatity buttons (-, inbox,+) */
 .qty-minu {
-	
 	border-radius: 
 	calc(var(--common-bradius)*4) 0 0  calc(var(--common-bradius)*4);
 }
@@ -911,66 +950,29 @@ h4, fieldset legend{
 	border-left: none ;
 	border-right: none ;
 }
+
 .qty-plus  {
 	border-radius:  
 	0 calc(var(--common-bradius)*4) calc(var(--common-bradius)*4) 0;  
 }
 
+
 .add-cart {
+	flex: 1 1 auto;
 	color: var(--clor-wsmoke);
 	background-color: var(--ctheme-c-red);
 	border-radius: calc(var(--common-bradius)*4) ;
-	/* padding: var(--common-padding) 0; */
 	border: none;
-	
 }
 
 .add-cart:focus {
 	color:  white;
 	background-color: rgb(231, 117, 106);
 	box-shadow: 0 0.2em 1em rgb(195, 195, 195);
-	
 }
 
-/* Qty butons FLEX style */
-.qty-container{
-	display: flex;
-	flex-wrap: wrap;
-	/* align-content: center; */
-	gap: calc(var(--common-gap)*2);
-	padding-top: var(--common-padding);
-}
-.qty-buttons {
-	display: flex;
 
-	flex: 1 1 auto;
-	max-height: 100%;
-	height: 3em;
-	/* border: 0.5em solid white; */
-	/* padding-right:calc(var(--common-padding)*5) ;   */
-	/* --Media query change padding  */
-}
 
-.add-cart {
-	flex: 1 1 auto;
-	/* border: 0.5em solid white; */
-}
-.qty-buttons li {
-	display: flex;
-	/* padding: var(--common-padding) 0; */
-	flex-grow: 1;
-	
-}
-/* -- make Qty bottons to grow */
-.qty-minu, .qty-plus, .qty-ibox  {
-	/* flex: 1 1 auto; */
-	max-width: 100%;   
-	width: 1em;
-	flex-grow:1 ;
-	text-align: center;
-}
-
-/* .qty-ibox  { */
 
 
 
