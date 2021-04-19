@@ -1111,9 +1111,9 @@ font-size: var(--fsize-l);
 	font-size: var(--fsize-xxl);
 }
 
-.bulb-white, .bulb-yellow, .bulb-rainbow  {
-	font-size: var(--fsize-reg);
-}
+/* .bulb-white, .bulb-yellow, .bulb-rainbow  {
+	font-size: var(--fsize-s);
+} */
 
 
 /* /////////////////// */
