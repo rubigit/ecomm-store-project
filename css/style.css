@@ -1296,7 +1296,7 @@ font-size: var(--fsize-l);
   }
 
   @media screen and (min-width: 60em) {
-	.submenu{ calc(padding-left: 1em)*4); 
+	.submenu { calc(padding-left: 1em)*4); 
 	}
 
 	/* Main FOR SINGLE PRODUCT PAGE */
@@ -1310,7 +1310,8 @@ font-size: var(--fsize-l);
 
   @media screen and (min-width: 70em) {
 
-	.submenu{ calc(padding-left: 1em)*20); 
+	.submenu{ calc(padding-left: 1em)*20);
+		padding-left: 4em; 
 	}
 	html{
 		/*VAR FONTS SIZE*/
