@@ -938,6 +938,11 @@ h4, fieldset legend, .overview-submenu a{
 	border-left: none ;
 	border-right: none ;
 }
+.qty-ibox::placeholder{
+	opacity:0.5;
+	color: inherit;
+	font-size: inherit;
+}
 
 .qty-plus  {
 	border-radius:  
