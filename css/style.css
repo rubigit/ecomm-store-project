@@ -556,8 +556,8 @@ color:var(--ctheme-c-red);
 /* -- remove extra information of the product*/
 .prod-description-rate dd span:last-child,
 .prod-description-rate dt, 
-.product form, 
-.product a{ 
+.product form
+{ 
 display: none;
 }
 
