@@ -738,15 +738,15 @@ nav .legal {
 	display: none;
 } 
 
-.prd-description fieldset{
+.prd-description fieldset, .add-cart {
 	border: none;
 }
 
 
 .prd-product{
-	background-color: whitesmoke;
-	padding:var(--common-padding);
 	display: grid;
+	background-color: whitesmoke;
+	padding:var(--common-padding);	
 	gap: var(--common-gap);
 	
 	/* --Change grid values in media query */
@@ -773,7 +773,6 @@ nav .legal {
 }
 
 .prd-heading-pictures img{
-	background-color: red;
 	height: 4em;
 	width: 4em;  
 	/* --Change dimension in media query */
@@ -785,11 +784,11 @@ nav .legal {
 .prd-description {
 	display: flex;
 	flex-direction: column;
-	border:0.05em solid red;
-	gap:calc(var(--common-gap)*1.5);
-	font-family: var(--fnt-nuni);
 	color:var(--ctheme-dawn);
+	font-family: var(--fnt-nuni);
 	font-size: var(--fsize-reg);
+	gap:calc(var(--common-gap)*1.5);
+	
 }
 
 /* --inheriy font styles from the Description parent */
@@ -836,14 +835,14 @@ h4, fieldset legend, .overview-submenu a{
 
 /*  color swatches bulb-color-options*/
 .bulb-white, .bulb-yellow, .bulb-rainbow  {
-	font-size: var(--fsize-s);
+	font-size: var(--fsize-s);	
+	text-align: center;
 	border: 0.03em solid var(--clor-silver);
 	box-shadow: 0 0.2em 1em rgb(195, 195, 195);
-	height: 6em;
-	width: 6em;
-	text-align: center;
 	padding: calc(var(--common-padding)/2) ;
 	background-clip: content-box;
+	height: 6em;
+	width: 6em;
 }
 
 .bulb-white:focus, .bulb-yellow:focus, .bulb-rainbow:focus{
@@ -926,8 +925,8 @@ h4, fieldset legend, .overview-submenu a{
 
 .qty-minu, .qty-plus {
 	color: var(--clor-black);
-	background-color: transparent;
 	font-size: var(--fsize-xl);
+	background-color: transparent;
 	padding: 0 calc(var(--common-padding)/4);
 }
 
@@ -960,12 +959,14 @@ h4, fieldset legend, .overview-submenu a{
 	color: var(--clor-wsmoke);
 	background-color: var(--ctheme-c-red);
 	border-radius: calc(var(--common-bradius)*4) ;
-	border: none;
+}
+.add-cart:hover {
+	background-color: var(--clor-dim-gray);
+	box-shadow: 0 0.2em 1em rgb(195, 195, 195);
 }
 
 .add-cart:focus {
-	color:  white;
-	background-color: rgb(231, 117, 106);
+	background-color: rgb(243, 145, 136);
 	box-shadow: 0 0.2em 1em rgb(195, 195, 195);
 }
 
@@ -991,9 +992,7 @@ h4, fieldset legend, .overview-submenu a{
 }
 
 .overview-submenu li{
-	padding: calc(var(--common-padding)/2) 0;
-	padding-left: var(--common-padding);
-	padding-top: var(--common-padding);
+	padding: var(--common-padding) 0 0 var(--common-padding);
 }
 
 
@@ -1029,6 +1028,8 @@ h4, fieldset legend, .overview-submenu a{
 	.onsale-pgraph {font-size: var(--fsize-xxl);}
 		
 	.onsale-cagory , .btn-onsale {font-size: var(--fsize-s);}
+	.qty-buttons { max-width: 30%; }
+
 }
 
 @media screen and (min-width: 40em) {
@@ -1098,6 +1099,34 @@ h4, fieldset legend, .overview-submenu a{
 	}
 
 
+/* ///////////////////// */
+/* here */
+
+
+.prd-description, h4, 
+fieldset legend, .overview-submenu a {
+font-size: var(--fsize-l);
+}
+
+.prd-description h3, 
+.qty-ibox, .add-cart  {
+	font-size: var(--fsize-xl);
+}
+
+.prd-description ins, 
+.qty-minu, .qty-plus {
+	font-size: var(--fsize-xxl);
+}
+
+.bulb-white, .bulb-yellow, .bulb-rainbow  {
+	font-size: var(--fsize-reg);
+}
+
+
+/* /////////////////// */
+
+
+	
 
   }
   @media screen and (min-width: 50em) {
