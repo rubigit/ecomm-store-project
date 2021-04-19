@@ -230,6 +230,7 @@ border-color: var(--ctheme-malibu);
 /* --- Nav for navigation menu items-- */
 .navigation {
 	display: none;
+	position: relative;
 }
 
 /* ===================================================
@@ -1115,7 +1116,8 @@ font-size: var(--fsize-l);
 	          GRID FOR HEADER 
 	::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
-
+	.submenu{ calc(padding-left: 1em)*2); 
+	}
 
 	.page-header {
 		grid-template-columns: 1fr 1fr auto;
@@ -1176,6 +1178,7 @@ font-size: var(--fsize-l);
 		gap:1em; /* --saparate menus between each others */
 		padding:calc(var(--common-padding)/2);
 		border-radius: var(--common-bradius);
+		position: relative;
 	}
 
 	.menu li{
@@ -1190,6 +1193,19 @@ font-size: var(--fsize-l);
 
 	.menu li:hover .submenu{
 		display: flex;
+	}
+
+	.menu li .light:hover .submenu{
+		display: flex;
+		top: 2.5em;
+		left: 3em;
+	}
+
+	.menu li .shop:hover .submenu{
+		display: flex;
+		position:absolute;
+		top:2.5em;
+		left: 6em;
 	}
 	.menu li a:hover{
 		color: var(--ctheme-malibu);
@@ -1212,8 +1228,11 @@ font-size: var(--fsize-l);
 		/* background-color: #77CDF3; */
 		flex-direction: column;
 		justify-content: space-between;
+		padding-top: 3em;
+		padding-left: 1em;
 		gap:0.2em; 
 		 /* separate submenu items */	
+		 position:absolute;
 	}
 	
 	.submenu li{
@@ -1277,6 +1296,8 @@ font-size: var(--fsize-l);
   }
 
   @media screen and (min-width: 60em) {
+	.submenu{ calc(padding-left: 1em)*4); 
+	}
 
 	/* Main FOR SINGLE PRODUCT PAGE */
 	.prd-product { grid-template-columns: 1fr 1fr; }
@@ -1289,6 +1310,8 @@ font-size: var(--fsize-l);
 
   @media screen and (min-width: 70em) {
 
+	.submenu{ calc(padding-left: 1em)*20); 
+	}
 	html{
 		/*VAR FONTS SIZE*/
 		--fsize-xxxl:2.5em;
