@@ -764,9 +764,7 @@ nav .legal {
 .prd-heading-pictures{
 	display:flex;
 	justify-content: space-evenly;
-	/* padding: 0 calc(var(--common-padding)/3); */
 	flex: 1 1 auto;
-	border: 0.02em solid red;
 	padding: 0 var(--common-padding);
 	gap: calc(var(--common-gap)*2);
 }
@@ -926,7 +924,7 @@ h4, fieldset legend, .overview-submenu a{
 
 .qty-minu:focus, .qty-plus:focus {
 	color: var(--clor-wsmoke);
-	background-color: var(--ctheme-malibu);
+	background-color: var(--clor-dim-gray);
 }
 
 
@@ -1282,11 +1280,18 @@ font-size: var(--fsize-l);
 		align-self: flex-end;
 	}
 
-
+	.prd-heading-pictures{
+		padding: 0 calc(var(--common-padding)*4);
+	}
   }
 
   @media screen and (min-width: 60em) {
 	.prd-product { grid-template-columns: 1fr 1fr; }
+
+	.prd-heading-pictures{
+		border-right: 0.05em solid var(--clor-silver);
+	}
+
 }
 
   @media screen and (min-width: 70em) {
