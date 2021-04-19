@@ -769,6 +769,9 @@ nav .legal {
 	gap: calc(var(--common-gap)*2);
 }
 
+.prd-heading-pictures li:hover {
+	opacity: 0.7;
+}
 
 /* Description of the  single item */
 /* Description parent */
