@@ -1146,7 +1146,10 @@ font-size: var(--fsize-l);
 	.delete{
 		color:rgb(121, 250, 250);
 	}
-
+	.search label span{
+		display: none;
+		}
+		
 
 	html{
 	/*VAR FONTS SIZE*/
