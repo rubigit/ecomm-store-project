@@ -1096,6 +1096,7 @@ fieldset legend, .overview-submenu a {
 font-size: var(--fsize-l);
 }
 
+
 .prd-description h3, 
 .qty-ibox, .add-cart  {
 	font-size: var(--fsize-xl);
@@ -1106,15 +1107,7 @@ font-size: var(--fsize-l);
 	font-size: var(--fsize-xxl);
 }
 
-/* .bulb-white, .bulb-yellow, .bulb-rainbow  {
-	font-size: var(--fsize-s);
-} */
 
-
-/* /////////////////// */
-
-
-	
 
   }
   @media screen and (min-width: 50em) {
@@ -1284,6 +1277,8 @@ font-size: var(--fsize-l);
   }
 
   @media screen and (min-width: 60em) {
+
+	/* Main FOR SINGLE PRODUCT PAGE */
 	.prd-product { grid-template-columns: 1fr 1fr; }
 
 	.prd-heading-pictures{
@@ -1299,23 +1294,25 @@ font-size: var(--fsize-l);
 		--fsize-xxxl:2.5em;
 		--fsize-xxl:1.7em;
   }
+
+
+/* Update font size */
+
   .page-header {font-size:var(--fsize-xl); }
   .onsale-cagory , .btn-onsale {font-size: var(--fsize-l);}
   
   .filters{ font-size: var(--fsize-reg);}
   .filter-options legend {font-size: var(--fsize-xl);}
-  
+  .menu li{ font-size: var(--fsize-s);}
 
 
-  .menu li{
-	font-size: var(--fsize-reg);
-	
-	}
 
-	.filter-options{
+  .filter-options{
 		padding-right: 5em;
 	}
 
+
+	/* Make Results to be a GRID CONTAINER */
 
 	.results{
 		display:grid;
@@ -1335,9 +1332,5 @@ font-size: var(--fsize-l);
   @media screen and (min-width: 90em) {
 
 	.page-header {font-size:var(--fsize-xxl); }
-
-
-	.menu li{
-		font-size: var(--fsize-l);
-		}
+	.menu li{font-size: var(--fsize-reg);}
 }
