@@ -1159,7 +1159,7 @@ font-size: var(--fsize-l);
 	.pagination {font-size: var(--fsize-xxl);}
 
 
-	.logo {max-width: 9em;}
+
 
 	.nav-toggle{
 		display: none;
@@ -1314,7 +1314,7 @@ font-size: var(--fsize-l);
   .filters{ font-size: var(--fsize-reg);}
   .filter-options legend {font-size: var(--fsize-xl);}
   
-  .logo {max-width: 10em;}
+
 
   .menu li{
 	font-size: var(--fsize-reg);
@@ -1347,7 +1347,7 @@ font-size: var(--fsize-l);
 	}
 	
 	.page-header {font-size:var(--fsize-xxl); }
-	.logo {max-width: 11em;}
+
 
 	.menu li{
 		font-size: var(--fsize-l);
