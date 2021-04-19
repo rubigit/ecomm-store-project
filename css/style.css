@@ -747,7 +747,7 @@ nav .legal {
 	display: grid;
 	background-color: whitesmoke;
 	padding:var(--common-padding);	
-	gap: var(--common-gap);
+	gap: calc(var(--common-gap)*2);
 	
 	/* --Change grid values in media query */
 }
@@ -766,16 +766,9 @@ nav .legal {
 	justify-content: space-evenly;
 	/* padding: 0 calc(var(--common-padding)/3); */
 	flex: 1 1 auto;
-	border: 0.05em solid red;
-	/* align-items: center; */
-	/* width: auto; */
-	/* height: 4em; */
-}
-
-.prd-heading-pictures img{
-	height: 4em;
-	width: 4em;  
-	/* --Change dimension in media query */
+	border: 0.02em solid red;
+	padding: 0 var(--common-padding);
+	gap: calc(var(--common-gap)*2);
 }
 
 
