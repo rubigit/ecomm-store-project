@@ -3,9 +3,9 @@ const products = [
     {
         name: `Vavi`,
         type: `Table & Desk Lamp`,
-        price: { regPrice: 50, salePrice: 39 },
+        price: { regPrice: 66, salePrice: 55 },
         shortdescription: shortProductDescription,
         rate: `4.5`,
-        picture: { img1: `desk-lamp-01-480w.jpg`, img2: `desk-lamp-01-960w.jpg`img3: `desk-lamp-01-1920w.jpg` }
+        picture: `desk-lamp-01-480w.jpg`,
     }
 ]
