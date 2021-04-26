@@ -9,8 +9,10 @@ products.forEach((product) => {
 
 });
 
-document.querySelector(`#ProductTitle`).innerHTML = `${prDetail.name} ${prDetail.category}`;
-
+document.querySelector(`#ProductTitle`).innerHTML = `${prDetail.name} ${prDetail.category}`
+document.querySelector(`#dataprice`).value = `${prDetail.price.salePrice}`
+document.querySelector(`#delPrice`).innerHTML = `$${prDetail.price.regPrice}.00`
+document.querySelector(`#insPrice`).innerHTML = `$${prDetail.price.salePrice}.00`
 
 
 
