@@ -1164,6 +1164,7 @@ font-size: var(--fsize-l);
 		align-items: center;
 		justify-content: space-between;
 		padding: 2em 4em;
+		z-index: 1;
 	}
 
 	.menu{
@@ -1202,6 +1203,8 @@ font-size: var(--fsize-l);
 		position:absolute;
 		top:2.5em;
 		left: 6em;
+	
+		
 	}
 	.menu li a:hover{
 		color: var(--ctheme-malibu);
@@ -1209,6 +1212,7 @@ font-size: var(--fsize-l);
 		text-decoration: underline;
 		text-underline-position: under;
 		text-decoration-thickness: 0.25em;
+		
 	}
 	
 	.menu li a{
