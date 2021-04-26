@@ -555,12 +555,7 @@ color:var(--ctheme-c-red);
 
 
 /* -- remove extra information of the product*/
-.prod-description-rate dd span:last-child,
-.prod-description-rate dt, 
 
-{ 
-display: none;
-}
 
 .product footer{
 	display: flex;
