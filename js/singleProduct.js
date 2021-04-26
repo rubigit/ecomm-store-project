@@ -13,7 +13,15 @@ document.querySelector(`#ProductTitle`).innerHTML = `${prDetail.name} ${prDetail
 document.querySelector(`#dataprice`).value = `${prDetail.price.salePrice}`
 document.querySelector(`#delPrice`).innerHTML = `$${prDetail.price.regPrice}.00`
 document.querySelector(`#insPrice`).innerHTML = `$${prDetail.price.salePrice}.00`
-
+document.querySelector(`#description`).innerHTML = `
+<li><span>${prDetail.overDescription}</span></li>
+<li><span>${prDetail.overDescription}</span></li>`
+document.querySelector(`#shipping`).innerHTML = `
+<li><span>${prDetail.overDescription}</span></li>
+<li><span>${prDetail.overDescription}</span></li>`
+document.querySelector(`#guarantee`).innerHTML = `
+<li><span>${prDetail.overDescription}</span></li>
+<li><span>${prDetail.overDescription}</span></li>`
 
 
 
