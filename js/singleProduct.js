@@ -21,8 +21,7 @@ const loadPicture = function (urlPicture) {
 const productTable = document.querySelector(`#picList`)
 
 let sInnerHTML = ` 
-<img id="mainPicture" src="img/${prDetail.picture[0]}" alt="Two table lamps in a bedroom" height="320" />
-<ul id="CollectionPicture" class="prd-heading-pictures"></ul>`
+<img id="mainPicture" src="img/${prDetail.picture[0]}" alt="Two table lamps in a bedroom" height="320" />`
 productTable.innerHTML = sInnerHTML
 
 const newUl = document.createElement(`ul`)
@@ -31,9 +30,9 @@ newUl.classList.add(`prd-heading-pictures`)
 prDetail.picture.forEach((img) => {
     const newLi = document.createElement(`li`)
     const newProduct = document.createElement(`img`)
-    newProduct.src = `img/${img}`
-    newProduct.alt = "iTwo wall lamps in a bedroom"
-    newProduct.height = "50"
+    newProduct.setAttribute(`src`, `img/${img}`)
+    newProduct.setAttribute(`alt`, `${prDetail.picDescription}`)
+    newProduct.setAttribute(`height`, `"50"`)
     newProduct.addEventListener(`click`, function () { loadPicture(`img/${img}`) })
     newLi.appendChild(newProduct)
     newUl.appendChild(newLi)
