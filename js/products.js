@@ -14,8 +14,8 @@ const products = [
         picture: [
             `desk-lamp-01-960w.jpg`,
             `desk-lamp-02-960w.jpg`,
-            `floor-lamp-01-960w.jpg`,
             `floor-lamp-02-960w.jpg`,
+            // `floor-lamp-01-960w.jpg`,
             `wall-lamp-02-960w.jpg`
         ],
         picDescription: `Two table lamps in a bedroom`,
