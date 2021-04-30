@@ -94,17 +94,18 @@
     <!-- Filtering product form -->
     <!-- makeFloat -->
     <form class="filters makeFloat">
-      <button class="filter-opt-button">Filter options</button>
+      <button type="button" class="filter-opt-button">Filter options</button>
       <h2 class="">Filters</h2>
       <div class="filter-btn-collectio">
         <!-- hide -->
-        <button class="clear-filter ">Clear all filters</button>
+        <button type="button" id="btnClearFilter" class="clear-filter ">Clear all filters</button>
+        <button type="button" id="btnApplyFilter" class="clear-filter ">Apply Filters</button>
       </div>
       <!-- hide -->
       <div class="filter-options ">
         <fieldset>
           <legend>Lamp category</legend>
-          <ul class="filter-list">
+          <ul id="filterCategory" class="filter-list">
             <li><input type="checkbox" name="type" value="desk" id="desk"> <label for="desk">Desk &#38; table
                 lamps</label></li>
             <li><input type="checkbox" name="type" value="floor" id="floor"> <label for="floor">Floor lamps</label></li>
@@ -115,7 +116,7 @@
         </fieldset>
         <fieldset>
           <legend>Lamp finish</legend>
-          <ul class="filter-list">
+          <ul id="filterLampFinish" class="filter-list">
             <li><input type="checkbox" name="color" value="black" id="black"> <label for="black">Black</label></li>
             <li><input type="checkbox" name="color" value="white" id="white"> <label for="white">White</label></li>
             <li><input type="checkbox" name="color" value="grey" id="grey"> <label for="grey">Grey</label></li>
@@ -125,7 +126,7 @@
         </fieldset>
         <fieldset>
           <legend>Light bulb type</legend>
-          <ol class="filter-list">
+          <ol id="filterBulbType" class="filter-list">
             <li><input type="checkbox" name="bulb" value="inc" id="inc"> <label for="inc">Incandescent</label></li>
             <li><input type="checkbox" name="bulb" value="led" id="led"> <label for="led">Led</label></li>
           </ol>

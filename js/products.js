@@ -15,7 +15,7 @@ const products = [
             `desk-lamp-01-960w.jpg`,
             `desk-lamp-02-960w.jpg`,
             `floor-lamp-02-960w.jpg`,
-            // `floor-lamp-01-960w.jpg`,
+            `floor-lamp-01-960w.jpg`,
             `wall-lamp-02-960w.jpg`
         ],
         picDescription: `Two table lamps in a bedroom`,
@@ -72,7 +72,7 @@ const products = [
         name: `Aria`,
         category: `Floor Lamp`,
         color: `gold`,
-        bulbType: `Incandescent`,
+        bulbType: `inc`,
         bulbColor: { color1: `White`, color2: `Yellow`, color2: `Rainbow` },
         price: { regPrice: 74, salePrice: 63 },
         shortdescription: shortProductDescription,
