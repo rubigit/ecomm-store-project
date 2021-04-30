@@ -33,7 +33,9 @@ prDetail.picture.forEach((img) => {
     newProduct.setAttribute(`src`, `img/${img}`)
     newProduct.setAttribute(`alt`, `${prDetail.picDescription}`)
     newProduct.setAttribute(`height`, `"50"`)
+
     newProduct.addEventListener(`click`, function () { loadPicture(`img/${img}`) })
+
     newLi.appendChild(newProduct)
     newUl.appendChild(newLi)
 })
