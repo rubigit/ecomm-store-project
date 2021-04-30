@@ -1,11 +1,13 @@
 
 let prDetail
-let sku = window.location.search.split('=')[1]
 
 products.forEach((product) => {
+
+    let sku = window.location.search.split('=')[1]
     if (product.sku == sku) {
         prDetail = product
     }
+
 })
 
 

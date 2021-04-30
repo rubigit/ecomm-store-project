@@ -340,25 +340,44 @@ border-color: var(--ctheme-malibu);
                    FILTERS 
 :::::::::::::::::::::::::::::::::::::::::: */
 /* -- Main container for filters */
+
+/* --change with js -static */
+
+
+.products {
+	position: relative;
+}
+
 .filters{
-	align-items: flex-end;
+
 	color: var(--ctheme-dawn);
 	font-family: var(--fnt-nuni);
 	font-size: var(--fsize-s);
 	display:flex;
-	justify-content: flex-end;
+
 	padding: calc(var(--common-padding) /2) var(--common-padding);
 	flex-direction: column;
 	gap: calc(var(--common-gap) *2);
 	background-color:var(--clor-wsmoke);
 }
 
+.makeFloat{
+	position: absolute;
+	top:-9.5em;
+	right:0;
+	flex: 1 0 auto;
+	width: 100%;
+	height: 100%; 
+}
+
 .filter-options{
 	display: flex;
 	flex-direction: column;
-	gap: calc(var(--common-padding)/2);
-	
+	gap: calc(var(--common-padding)*2);
+	overflow:auto; 
+	height:40em;
 }
+
 
 
 .filter-opt-button {
@@ -383,9 +402,61 @@ border-color: var(--ctheme-malibu);
 
 
 
-.filter-options fieldset, .filters h2 {
-	display: none;
+.filter-btn-collectio{
+	display: flex;
+	justify-content:flex-end;
+	padding: var(--common-padding);
+	box-shadow: 0 1em 1em -1em var(--ctheme-dawn);
 }
+
+.clear-filter {
+	padding: calc(var(--common-padding)/2) var(--common-padding);
+	font-weight: bold;
+	color:var(--ctheme-malibu);
+	border: 0.05em solid var(--ctheme-malibu);
+	background-color: transparent;
+
+}
+
+.filter-options fieldset{
+	border: none;
+	display: flex;
+	gap: calc(var(--common-gap) *2);
+	flex-grow: 1;
+	padding: var(--common-padding);
+	
+
+	}
+
+.filter-options legend{
+	color: var(--clor-dim-gray);
+	font-size: var(--fsize-l);
+
+}
+
+.filters h2{
+	display: none;
+	color:var(--ctheme-malibu);
+	font-size: var(--fsize-xxl);
+	font-family: var(--fnt-exo2);
+	font-weight: bolder;
+}
+
+.filter-list{
+	display: flex;
+	flex-direction: column;
+	gap:var(--common-gap);
+	border-top: 0.01em solid var(--clor-silver);
+	flex-grow: 1;
+	padding-top: var(--common-padding);
+}
+
+
+.hide {
+	display: none;
+	background-color: var(--ctheme-c-red);
+}
+
 
 
 
@@ -1025,6 +1096,10 @@ h4, fieldset legend, .overview-submenu a{
 
 @media screen and (min-width: 40em) {
 
+	.bestatic{
+	position: static;
+	}
+
 
 	html{--fsize-xxxl:1.8em;}
 
@@ -1047,44 +1122,31 @@ h4, fieldset legend, .overview-submenu a{
 		grid-row: 2 / span 2;
 		align-items: flex-start;
 		justify-content: flex-start;
+		position:static;
 	}
+
+	.filter-options {
+		position:static;
+		overflow:visible;
+		height:auto;
+	
+	}
+
+	/* .filters h2{
+		display: block;
+	} */
+
+
+	/* .filter-opt-button{
+		display: none;
+	}  */
 	
 	.pagination {
 		grid-column: 2;
 	}
 
-	.filter-options button{
-		display: none;
-	}
 
-	.filter-options fieldset{
-		border: none;
-		display: flex;
-		gap: calc(var(--common-gap) *2);
-		flex: 1 1 auto;
-		padding: var(--common-padding);
-		}
-
-	.filter-options legend{
-		color: var(--clor-dim-gray);
-		font-size: var(--fsize-l);
-		padding-bottom: 0.2em;
-		border-bottom: 0.01em solid var(--clor-silver);
-		width: 9em;
-	}
-
-	.filters h2{
-		display: flex;
-		color:var(--ctheme-malibu);
-		font-size: var(--fsize-xxl);
-		font-family: var(--fnt-exo2);
-		font-weight: bolder;
-	}
-	.filter-list{
-		display: flex;
-		flex-direction: column;
-		gap:var(--common-gap);
-	}
+	
 
 
 
@@ -1261,11 +1323,12 @@ font-size: var(--fsize-l);
 	.products{
 		display:block;
 	   }
+
 	.filters{
 	background-color: var(--clor-wsmoke);
 	
 	align-items: stretch;
-	padding: calc(var(--common-padding)*2);
+	/* padding: calc(var(--common-padding)*2); */
 }
 
 
@@ -1333,9 +1396,6 @@ font-size: var(--fsize-l);
 
 
 
-  .filter-options{
-		padding-right: 5em;
-	}
 
 
 	/* Make Results to be a GRID CONTAINER */
