@@ -415,6 +415,7 @@ border-color: var(--ctheme-malibu);
 	justify-content:flex-end;
 	padding: var(--common-padding);
 	box-shadow: 0 1em 1em -1em var(--ctheme-dawn);
+	gap: calc(var(--common-gap)*2);
 }
 
 .clear-filter {
@@ -424,6 +425,25 @@ border-color: var(--ctheme-malibu);
 	border: 0.05em solid var(--ctheme-malibu);
 	background-color: transparent;
 
+}
+
+.clear-filter:hover {
+	border: 0.05em solid #5ea1be;
+	background-color: rgb(230, 230, 230);
+
+}
+
+.aplly-filter {
+	padding: calc(var(--common-padding)/2) var(--common-padding);
+	font-weight: bold;
+	color:var(--clor-wsmoke);
+	border: 0.05em solid var(--ctheme-dawn);
+	background-color:var(--clor-dim-gray);
+}
+.aplly-filter:hover {
+	border: 0.05em solid #727272;
+	background-color: #3b3b3b;
+	color: var(--clor-white);
 }
 
 .filter-options fieldset{
