@@ -22,8 +22,13 @@ body {
 	height: 100vh;
 	min-height: 100vh;
   margin:0; 
-  background: rgb(0, 0, 0);
-  background: radial-gradient(circle, var(--clor-wsmoke) 0%, rgb(218, 218, 218) 100%);
+  /* background: rgb(0, 0, 0);
+  background: radial-gradient(circle, var(--clor-wsmoke) 0%, rgb(218, 218, 218) 100%); */
+
+ 
+	background-image: radial-gradient( rgba(218, 218, 218, 0.774) 0.05em, var(--clor-wsmoke) 0.1em);
+	background-size: 1em 1em;
+
 }
 
 *, *::before, *::after {
@@ -258,6 +263,9 @@ border-color: var(--ctheme-malibu);
 
 /* photo main on sale item */
 .img-onsale{
+
+	box-shadow:  0 0 10px rgb(90, 90, 90);
+	
 }
 
 /* ======= Discount offer description =======  */
@@ -500,7 +508,8 @@ input[type=radio]:checked + label{
 :::::::::::::::::::::::::::::::::::::::::: */
 
 .results {
-	background-color: var(--clor-wsmoke);
+	/* background-color: var(--clor-wsmoke); */
+	background-color: transparent;
 	padding:0 var(--common-padding);
 	color:var(--ctheme-dawn);
 	font-size: var(--fsize-reg);
@@ -555,7 +564,8 @@ input[type=radio]:checked + label{
 	gap:var(--common-gap);
 	padding: var(--common-padding) 0;
 	font-family: inherit;
-	/* border:0.3em solid red; */
+	border:0.3em solid red;
+	
 }
 .product header{
 	/* background-color: rgb(73, 226, 142); */
@@ -563,7 +573,7 @@ input[type=radio]:checked + label{
 	flex-direction: column;
 	gap:calc(var(--common-gap) *2);
 	
-	/* border:0.3em solid red; */
+	
 }
 
 /* -- Add shadow to all image products */
@@ -632,6 +642,7 @@ color:var(--ctheme-c-red);
 	display: flex;
 	gap:calc(var(--common-gap) *2);
 	justify-content: flex-end;
+	
 }
 
 .product-like, .product-cart{
@@ -673,7 +684,8 @@ color:var(--ctheme-c-red);
 	align-items: center;
 	gap: calc(var(--common-gap) *2);
 	padding: var(--common-padding);
-	background-color: var(--clor-wsmoke);
+	/* background-color: var(--clor-wsmoke); */
+	background-color: transparent;
 	font-family: var(--fnt-nuni);
 	color: var(--ctheme-dawn);
 	font-size: var(--fsize-reg);
@@ -731,6 +743,7 @@ color:var(--ctheme-c-red);
 	gap: calc(var(--common-gap)*2);
 	padding-top: var(--common-padding);
 	font-family:var(--fnt-nuni);
+	box-shadow:  0 0 10px rgb(90, 90, 90);
 }
 
 
@@ -1325,7 +1338,8 @@ font-size: var(--fsize-l);
 	   }
 
 	.filters{
-	background-color: var(--clor-wsmoke);
+	/* background-color: var(--clor-wsmoke); */
+	background-color: transparent;
 	
 	align-items: stretch;
 	/* padding: calc(var(--common-padding)*2); */

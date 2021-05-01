@@ -15,10 +15,6 @@ const loadPicture = function (urlPicture) {
     document.querySelector(`#mainPicture`).src = urlPicture
 }
 
-// function fLoadPicture(urlPicture) {
-//     document.querySelector(`#mainPicture`).src = urlPicture
-
-// }
 
 const productTable = document.querySelector(`#picList`)
 
