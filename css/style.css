@@ -514,6 +514,11 @@ input[type=radio]:checked + label{
 	color:var(--ctheme-dawn);
 	font-size: var(--fsize-reg);
 	font-family: var(--fnt-nuni);
+	
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--common-gap)*3);
+
 }
 
 .results-hding {
@@ -562,11 +567,21 @@ input[type=radio]:checked + label{
 	display: flex;
 	flex-direction: column;
 	gap:var(--common-gap);
-	padding: var(--common-padding) 0;
+	/* padding: var(--common-padding) 0; */
 	font-family: inherit;
-	border:0.3em solid red;
+	box-shadow: none;
+	transition: box-shadow 0.3s ease-in-out;
+	
 	
 }
+
+.product:hover {
+	
+	padding: calc(var(--common-padding)/4);
+ 	box-shadow: 0px 15px 37px -15px rgba(174,174,174,0.93)
+}
+
+
 .product header{
 	/* background-color: rgb(73, 226, 142); */
 	display:flex;
@@ -635,13 +650,28 @@ color:var(--ctheme-c-red);
 }
 
 
-/* -- remove extra information of the product*/
+.see-more{
+	font: inherit;
+	color:inherit;
+	align-self: flex-start;
+	padding: calc(var(--common-padding)/2);
+	padding-left: 0;
+}
+
+.see-more:hover{
+	text-decoration: underline;
+	text-underline-position: under;
+	color: var(--ctheme-c-red);
+	font-weight: bold;
+	font-size:var(--fsize-l);
+}
 
 
 .product footer{
 	display: flex;
 	gap:calc(var(--common-gap) *2);
 	justify-content: flex-end;
+	
 	
 }
 

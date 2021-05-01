@@ -110,7 +110,7 @@ function LoadPage(filters, sort, searchFilter) {
       sInnerHTML += `</dd>
               </dl>
             </div>
-            <a href="./product.html?sku=${product.sku}">see more</a>
+            <a class="see-more" href="./product.html?sku=${product.sku}">see more</a>
           </header>
           <footer>
             <button class="product-like"><span class="produc-icon-text">.</span></button>
