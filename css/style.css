@@ -503,9 +503,14 @@ input[type=checkbox] + label, input[type=checkbox]:checked + label {
 input[type=checkbox] + label {	
 	background-image: url("../img/check-icon-01-01.svg");
 }
+input[type=checkbox]:hover + label {	
+	color: var(--clor-dim-gray);
+}
+
 
 input[type=checkbox]:checked + label {	
 	background-image: url("../img/check-icon-02-02.svg");
+	color: var(--clor-dim-gray);
 }
 /* ---- Start rating icons styles */
 
@@ -516,6 +521,10 @@ input[type=radio] + label {
 
 input[type=radio]:checked + label{
 	color: var(--ctheme-malibu);
+	cursor: default;
+}
+input[type=radio]:hover + label{
+	color: #c4305a;
 	cursor: default;
 }
 
@@ -681,6 +690,7 @@ color:var(--ctheme-c-red);
 .see-more:hover{
 	text-decoration: underline;
 	text-underline-position: under;
+	text-decoration-thickness: 0.15em;
 	color: var(--ctheme-c-red);
 	font-weight: bold;
 	font-size:var(--fsize-l);
