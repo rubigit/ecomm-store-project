@@ -58,7 +58,7 @@
       <label><span>Search</span>
         <input class="ibox-srch" type="search" name="find" id="find" placeholder="Type to search..">
       </label>
-      <button type="button"><span class="material-icons">search</span></button>
+      <button id="btnSearch" type="button"><span class="material-icons">search</span></button>
 
     </form>
 
@@ -170,19 +170,20 @@
         </fieldset>
       </div>
     </form>
-
+    <div class="results-hding">
+      <h2 class="subheading">Results</h2>
+      <fieldset class="sort-options">
+        <label for="sort">Sort by</label>
+        <select name="sort" id="sort">
+          <option value="name">Name</option>
+          <option value="high">Price, highest to lowest</option>
+          <option value="low">Price, lowest to highest</option>
+          <option value="rate">Rating</option>
+        </select>
+      </fieldset>
+    </div>
     <section id="results" class="results">
-      <div class="results-hding">
-        <h2 class="subheading">Results</h2>
-        <fieldset class="sort-options">
-          <label for="sort">Sort by</label>
-          <select name="sort" id="sort">
-            <option value="price-high">Price, highest to lowest</option>
-            <option value="price-low">Price, lowest to highest</option>
-            <option value="newest">Newest releases</option>
-          </select>
-        </fieldset>
-      </div>
+
 
 
       <!-- Product 1 -->

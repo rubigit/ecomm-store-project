@@ -1,11 +1,43 @@
-function LoadPage(filters) {
+function LoadPage(filters, sort, searchFilter) {
 
   const productTable = document.querySelector(`#results`)
   productTable.innerHTML = ""
 
+  products.sort(function (a, b) {
+    var valueA
+    var valueB
+
+    if (sort == "high") {
+      valueA = b.price.salePrice
+      valueB = a.price.salePrice
+    } else if (sort == "low") {
+      valueA = a.price.salePrice
+      valueB = b.price.salePrice
+    } else if (sort == "rate") {
+      valueA = a.rate
+      valueB = b.rate
+    }
+    else {
+      valueA = a.name
+      valueB = b.name
+    }
+
+    if (valueA > valueB) {
+      return 1;
+    }
+    if (valueA < valueB) {
+      return -1;
+    }
+
+    return 0;
+
+  });
+
   products.forEach((product) => {
+
     var addProduct = false
-    if (filters[0].length == 0 && filters[1].length == 0 && filters[2].length == 0 && filters[3] == 0) {
+
+    if (filters[0].length == 0 && filters[1].length == 0 && filters[2].length == 0 && filters[3] == 0 && searchFilter == "") {
       addProduct = true;
     }
     else {
@@ -41,10 +73,15 @@ function LoadPage(filters) {
         })
       }
 
+      // SEARCH NAME
+      if (searchFilter != "" && addProduct) {
+        if (product.name.toUpperCase().includes(searchFilter.toUpperCase()))
+          addProduct = true;
+        else
+          addProduct = false;
+      }
 
     }
-    //
-
 
     if (addProduct) {
       const displayProduct = document.createElement(`article`)
@@ -140,7 +177,17 @@ const toggleFilters = function () {
   document.querySelector(`.filter-btn-collectio`).classList.toggle(`hide`)
 
   var filters = getFilters();
-  LoadPage(filters)
+  LoadPage(filters, document.querySelector(`#sort`).value, document.querySelector(`#find`).value)
+}
+const applyFilter = function () {
+  var filters = getFilters();
+  LoadPage(filters, document.querySelector(`#sort`).value, document.querySelector(`#find`).value)
+}
+
+const searchFilter = function () {
+
+  var filters = getFilters();
+  LoadPage(filters, document.querySelector(`#sort`).value, document.querySelector(`#find`).value)
 }
 
 const clearFilters = function () {
@@ -169,18 +216,32 @@ const clearFilters = function () {
   document.querySelector(`#aboveOne`).checked = false
 }
 
+function sortProducts(event) {
+
+  var filters = getFilters();
+
+  LoadPage(filters, event.target.value, document.querySelector(`#find`).value)
+
+}
 
 // LOAD PAGE
 
 //initialize products
-LoadPage(new Array(new Array(), new Array(), new Array(), 1));
+LoadPage(new Array(new Array(), new Array(), new Array(), 0), 'name', '');
 
 // Select filter button
 const filterButton = document.querySelector(`.filter-opt-button`)
 
 filterButton.addEventListener(`click`, toggleFilters)
 document.querySelector(`#btnClearFilter`).addEventListener(`click`, clearFilters)
+document.querySelector(`#btnApplyFilter`).addEventListener(`click`, applyFilter)
+document.querySelector(`#btnSearch`).addEventListener(`click`, searchFilter)
+
 
 document.querySelector(`.filters`).classList.toggle(`makeFloat`)
 document.querySelector(`.filter-options`).classList.toggle(`hide`)
 document.querySelector(`.filter-btn-collectio`).classList.toggle(`hide`)
+
+document.querySelector(`#sort`).addEventListener(`change`, sortProducts)
+
+
