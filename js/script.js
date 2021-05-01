@@ -50,7 +50,7 @@ function LoadPage(filters, sort, searchFilter) {
       if (filters[0].length > 0 && addProduct) {
         addProduct = false;
         filters[0].forEach((myCategory) => {
-          if (product.category.toUpperCase() == myCategory.toUpperCase())
+          if (product.idCategory.toUpperCase() == myCategory.toUpperCase())
             addProduct = true;
         })
       }
