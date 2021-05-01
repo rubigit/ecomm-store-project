@@ -14,10 +14,10 @@ const products = [
         rate: `5`,
         picture: [
             `desk-lamp-01-960w.jpg`,
-            `desk-lamp-02-960w.jpg`,
-            `floor-lamp-02-960w.jpg`,
+            `chand-04-960w.jpg`,
+            `floor-lamp-04-960w.jpg`,
             `floor-lamp-01-960w.jpg`,
-            `wall-lamp-02-960w.jpg`
+            `wall-lamp-01-960w.jpg`
         ],
         picDescription: `Two table lamps in a bedroom`,
         overDescription: genericOverview,
@@ -37,10 +37,10 @@ const products = [
         rate: `4.5`,
         picture: [
             `desk-lamp-02-960w.jpg`,
+            `desk-lamp-01-960w.jpg`,
+            `chand-01-960w.jpg`,
             `floor-lamp-01-960w.jpg`,
-            `desk-lamp-02-960w.jpg`,
-            `floor-lamp-01-960w.jpg`,
-            `desk-lamp-02-960w.jpg`
+            `wall-lamp-01-960w.jpg`
         ],
         picDescription: `Clear wine glass beside white table lamp`,
         overDescription: genericOverview,
@@ -60,8 +60,8 @@ const products = [
         rate: `4`,
         picture: [
             `floor-lamp-01-960w.jpg`,
-            `floor-lamp-01-960w.jpg`,
-            `floor-lamp-02-960w.jpg`,
+            `desk-lamp-02-960w.jpg`,
+            `desk-lamp-01-960w.jpg`,
             `floor-lamp-01-960w.jpg`,
             `floor-lamp-02-960w.jpg`
         ],
@@ -83,10 +83,10 @@ const products = [
         rate: `2.5`,
         picture: [
             `floor-lamp-02-960w.jpg`,
-            `floor-lamp-02-960w.jpg`,
-            `floor-lamp-02-960w.jpg`,
-            `floor-lamp-02-960w.jpg`,
-            `floor-lamp-02-960w.jpg`
+            `chand-03-960w.jpg`,
+            `chand-04-960w.jpg`,
+            `desk-lamp-01-960w.jpg`,
+            `desk-lamp-02-960w.jpg`
         ],
         picDescription: `Floor lamp beside sofa and window`,
         overDescription: genericOverview,
@@ -106,10 +106,10 @@ const products = [
         rate: `3.5`,
         picture: [
             `wall-lamp-01-960w.jpg`,
-            `wall-lamp-01-960w.jpg`,
+            `desk-lamp-02-960w.jpg`,
             `floor-lamp-02-960w.jpg`,
             `wall-lamp-01-960w.jpg`,
-            `wall-lamp-01-960w.jpg`
+            `desk-lamp-01-960w.jpg`
         ],
         picDescription: `Wall lamp in a modern bright livingroom`,
         overDescription: genericOverview,
@@ -129,10 +129,10 @@ const products = [
         rate: `4.5`,
         picture: [
             `wall-lamp-02-960w.jpg`,
-            `wall-lamp-02-960w.jpg`,
-            `wall-lamp-02-960w.jpg`,
-            `wall-lamp-02-960w.jpg`,
-            `wall-lamp-02-960w.jpg`
+            `desk-lamp-02-960w.jpg`,
+            `chand-01-960w.jpg`,
+            `floor-lamp-03-960w.jpg`,
+            `floor-lamp-04-960w.jpg`
 
         ],
         picDescription: `Two wall lamps in a bedroom`,
@@ -176,10 +176,10 @@ const products = [
         rate: `5`,
         picture: [
             `chand-02-960w.jpg`,
-            `floor-lamp-01-960w.jpg`,
+            `desk-lamp-01-960w.jpg`,
             `desk-lamp-02-960w.jpg`,
             `floor-lamp-01-960w.jpg`,
-            `desk-lamp-02-960w.jpg`
+            `wall-lamp-01-960w.jpg`
         ],
         picDescription: `Chandelier and red and brown floral stair carpet`,
         overDescription: genericOverview,
@@ -199,10 +199,10 @@ const products = [
         rate: `4`,
         picture: [
             `floor-lamp-03-960w.jpg`,
-            `floor-lamp-01-960w.jpg`,
+            `chand-03-960w.jpg`,
             `floor-lamp-02-960w.jpg`,
-            `floor-lamp-01-960w.jpg`,
-            `floor-lamp-02-960w.jpg`
+            `wall-lamp-02-960w.jpg`,
+            `wall-lamp-01-960w.jpg`
         ],
         picDescription: `Bedroom interior with lamps near bed and mirror wall`,
         overDescription: genericOverview,
@@ -222,10 +222,10 @@ const products = [
         rate: `2.5`,
         picture: [
             `floor-lamp-04-960w.jpg`,
+            `chand-01-960w.jpg`,
             `floor-lamp-02-960w.jpg`,
-            `floor-lamp-02-960w.jpg`,
-            `floor-lamp-02-960w.jpg`,
-            `floor-lamp-02-960w.jpg`
+            `floor-lamp-03-960w.jpg`,
+            `wall-lamp-02-960w.jpg`
         ],
         picDescription: `Floor lamp and green sofa`,
         overDescription: genericOverview,
@@ -247,8 +247,8 @@ const products = [
             `chand-03-960w.jpg`,
             `wall-lamp-01-960w.jpg`,
             `floor-lamp-02-960w.jpg`,
-            `wall-lamp-01-960w.jpg`,
-            `wall-lamp-01-960w.jpg`
+            `chand-04-960w.jpg`,
+            `desk-lamp-01-960w.jpg`
         ],
         picDescription: `Chandelier and grind curtains`,
         overDescription: genericOverview,
@@ -268,10 +268,10 @@ const products = [
         rate: `3.5`,
         picture: [
             `chand-04-960w.jpg`,
+            `floor-lamp-01-960w.jpg`,
+            `floor-lamp-02-960w.jpg`,
             `wall-lamp-02-960w.jpg`,
-            `wall-lamp-02-960w.jpg`,
-            `wall-lamp-02-960w.jpg`,
-            `wall-lamp-02-960w.jpg`
+            `wall-lamp-01-960w.jpg`
 
         ],
         picDescription: `white Chandelier and brown living room`,
