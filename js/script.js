@@ -4,8 +4,8 @@ function LoadPage(filters, sort, searchFilter) {
   productTable.innerHTML = ""
 
   products.sort(function (a, b) {
-    var valueA
-    var valueB
+    let valueA
+    let valueB
 
     if (sort == "high") {
       valueA = b.price.salePrice
@@ -23,62 +23,62 @@ function LoadPage(filters, sort, searchFilter) {
     }
 
     if (valueA > valueB) {
-      return 1;
+      return 1
     }
     if (valueA < valueB) {
-      return -1;
+      return -1
     }
 
-    return 0;
+    return 0
 
-  });
+  })
 
   products.forEach((product) => {
 
-    var addProduct = false
+    let addProduct = false
 
     if (filters[0].length == 0 && filters[1].length == 0 && filters[2].length == 0 && filters[3] == 0 && searchFilter == "") {
-      addProduct = true;
+      addProduct = true
     }
     else {
       //alert(filters[3])
       //RATING
       if (parseInt(product.rate) >= filters[3])
-        addProduct = true;
+        addProduct = true
 
       //CATEGORY
       if (filters[0].length > 0 && addProduct) {
-        addProduct = false;
+        addProduct = false
         filters[0].forEach((myCategory) => {
           if (product.idCategory.toUpperCase() == myCategory.toUpperCase())
-            addProduct = true;
+            addProduct = true
         })
       }
 
       // LAMP FINISH
       if (filters[1].length > 0 && addProduct) {
-        addProduct = false;
+        addProduct = false
         filters[1].forEach((myColor) => {
           if (product.color.toUpperCase() == myColor.toUpperCase())
-            addProduct = true;
+            addProduct = true
         })
       }
 
       //BULB TYPE
       if (filters[2].length > 0 && addProduct) {
-        addProduct = false;
+        addProduct = false
         filters[2].forEach((myBulbType) => {
           if (product.bulbType.toUpperCase() == myBulbType.toUpperCase())
-            addProduct = true;
+            addProduct = true
         })
       }
 
       // SEARCH NAME
       if (searchFilter != "" && addProduct) {
         if (product.name.toUpperCase().includes(searchFilter.toUpperCase()))
-          addProduct = true;
+          addProduct = true
         else
-          addProduct = false;
+          addProduct = false
       }
 
     }
@@ -86,7 +86,7 @@ function LoadPage(filters, sort, searchFilter) {
     if (addProduct) {
       const displayProduct = document.createElement(`article`)
       displayProduct.classList.add(`product`)
-      var sInnerHTML = `
+      let sInnerHTML = `
       <header>
             <img src="img/${product.picture[0]}" alt="${product.picDescription}" height="320" />
             <div class=prod-name-price>
@@ -96,16 +96,16 @@ function LoadPage(filters, sort, searchFilter) {
             <div class="prod-description-rate">
               <p>${product.shortdescription}</p>
               <dl>
-                  <dd>`;
+                  <dd>`
 
-      var aStars = product.rate.split('.');
+      let aStars = product.rate.split('.')
 
-      for (var i = 0; i < parseInt(aStars[0]); i++) {
-        sInnerHTML += '<span class="material-icons">star</span>';
+      for (let i = 0; i < parseInt(aStars[0]); i++) {
+        sInnerHTML += '<span class="material-icons">star</span>'
       }
 
       if (aStars[1] && parseInt(aStars[1]) == 5)
-        sInnerHTML += '<span class="material-icons">star_half</span>';
+        sInnerHTML += '<span class="material-icons">star_half</span>'
 
       sInnerHTML += `</dd>
               </dl>
@@ -116,41 +116,41 @@ function LoadPage(filters, sort, searchFilter) {
             <button class="product-like"><span class="produc-icon-text">.</span></button>
             <button class="product-cart"><span class="produc-icon-text">.</span></button>
           </footer>
-      `;
-      displayProduct.innerHTML = sInnerHTML;
+      `
+      displayProduct.innerHTML = sInnerHTML
       productTable.appendChild(displayProduct)
     }
   })
 }
 
 function getFilters() {
-  var filters = []
-  var category = []
-  var lampFinish = []
-  var bulbType = []
+  let filters = []
+  let category = []
+  let lampFinish = []
+  let bulbType = []
 
   //CATEGORY
-  var filterCategory = document.querySelector(`#filterCategory`).children
+  let filterCategory = document.querySelector(`#filterCategory`).children
 
-  for (var i = 0; i < filterCategory.length; i++) {
+  for (let i = 0; i < filterCategory.length; i++) {
     if (filterCategory[i].children[0].checked)
       category.push(filterCategory[i].children[0].value)
   }
-  filters[0] = category;
+  filters[0] = category
 
   //LAMP FINISH
-  var filterLampFinish = document.querySelector(`#filterLampFinish`).children
+  let filterLampFinish = document.querySelector(`#filterLampFinish`).children
 
-  for (var i = 0; i < filterLampFinish.length; i++) {
+  for (let i = 0; i < filterLampFinish.length; i++) {
     if (filterLampFinish[i].children[0].checked)
       lampFinish.push(filterLampFinish[i].children[0].value)
   }
-  filters[1] = lampFinish;
+  filters[1] = lampFinish
 
   //BULB TYPE
-  var filterBulbType = document.querySelector(`#filterBulbType`).children
+  let filterBulbType = document.querySelector(`#filterBulbType`).children
 
-  for (var i = 0; i < filterBulbType.length; i++) {
+  for (let i = 0; i < filterBulbType.length; i++) {
     if (filterBulbType[i].children[0].checked)
       bulbType.push(filterBulbType[i].children[0].value)
   }
@@ -176,36 +176,36 @@ const toggleFilters = function () {
   document.querySelector(`.filter-options`).classList.toggle(`hide`)
   document.querySelector(`.filter-btn-collectio`).classList.toggle(`hide`)
 
-  var filters = getFilters();
+  let filters = getFilters()
   LoadPage(filters, document.querySelector(`#sort`).value, document.querySelector(`#find`).value)
 }
 const applyFilter = function () {
-  var filters = getFilters();
+  let filters = getFilters()
   LoadPage(filters, document.querySelector(`#sort`).value, document.querySelector(`#find`).value)
 }
 
 const searchFilter = function () {
 
-  var filters = getFilters();
+  let filters = getFilters()
   LoadPage(filters, document.querySelector(`#sort`).value, document.querySelector(`#find`).value)
 }
 
 const clearFilters = function () {
   //CATEGORY
-  var filterCategory = document.querySelector(`#filterCategory`).children
-  for (var i = 0; i < filterCategory.length; i++) {
+  let filterCategory = document.querySelector(`#filterCategory`).children
+  for (let i = 0; i < filterCategory.length; i++) {
     filterCategory[i].children[0].checked = false
   }
 
   //LAMP FINISH
-  var filterLampFinish = document.querySelector(`#filterLampFinish`).children
-  for (var i = 0; i < filterLampFinish.length; i++) {
+  let filterLampFinish = document.querySelector(`#filterLampFinish`).children
+  for (let i = 0; i < filterLampFinish.length; i++) {
     filterLampFinish[i].children[0].checked = false
   }
 
   //BULB TYPE
-  var filterBulbType = document.querySelector(`#filterBulbType`).children
-  for (var i = 0; i < filterBulbType.length; i++) {
+  let filterBulbType = document.querySelector(`#filterBulbType`).children
+  for (let i = 0; i < filterBulbType.length; i++) {
     filterBulbType[i].children[0].checked = false
   }
 
@@ -218,7 +218,7 @@ const clearFilters = function () {
 
 function sortProducts(event) {
 
-  var filters = getFilters();
+  let filters = getFilters()
 
   LoadPage(filters, event.target.value, document.querySelector(`#find`).value)
 
@@ -227,9 +227,10 @@ function sortProducts(event) {
 // LOAD PAGE
 
 //initialize products
-LoadPage(new Array(new Array(), new Array(), new Array(), 0), 'name', '');
+LoadPage(new Array(new Array(), new Array(), new Array(), 0), 'name', '')
 
 // Select filter button
+// {
 const filterButton = document.querySelector(`.filter-opt-button`)
 
 filterButton.addEventListener(`click`, toggleFilters)
@@ -244,4 +245,4 @@ document.querySelector(`.filter-btn-collectio`).classList.toggle(`hide`)
 
 document.querySelector(`#sort`).addEventListener(`change`, sortProducts)
 
-
+// }
