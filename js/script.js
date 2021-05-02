@@ -113,8 +113,8 @@ function LoadPage(filters, sort, searchFilter) {
             <a class="see-more" href="./product.html?sku=${product.sku}">see more</a>
           </header>
           <footer>
-            <button class="product-like"><span class="produc-icon-text">.</span></button>
-            <button class="product-cart"><span class="produc-icon-text">.</span></button>
+            <button class="product-like" value="like"><span class="produc-icon-text"></span></button>
+            <button class="product-cart" value="cart"><span class="produc-icon-text"></span></button>
           </footer>
       `
       displayProduct.innerHTML = sInnerHTML
