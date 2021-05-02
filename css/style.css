@@ -343,6 +343,8 @@ border-color: var(--ctheme-malibu);
                    FILTERS 
 ===================================================*/
 /* -- Main container for filters */
+
+
 .filters{
 	display:flex;
 	flex-direction: column;
@@ -374,10 +376,24 @@ border-color: var(--ctheme-malibu);
 	height:40em;
 }
 
+
+
+/* update icon to close Filter options */
+.closeFilter {
+	background-image: url("../img/close-x-01.svg");
+	background-size: 1em 1em;
+	background-position-y: center;
+}
+
+/* Update icon to open Filter options */
+.FilterOpen {
+	 background-image: url("../img/filter-icon-01-01.svg");
+}
+
 /* --button to toggle the filter options */
 .filter-opt-button {
-	background-color: transparent;
-  	background-image: url("../img/filter-icon-01-01.svg");
+	/* background-color: transparent; */
+  
   	background-repeat: no-repeat;
 	border:none;
 	margin: var(--common-gap) 0;
@@ -393,7 +409,6 @@ border-color: var(--ctheme-malibu);
 }
 /* when hovering the button to toggle the filters */
 .filter-opt-button:hover {
-	background-image: url("../img/filter-icon-02-02.svg");
 	opacity:1;
 }
 

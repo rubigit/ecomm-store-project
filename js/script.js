@@ -171,6 +171,8 @@ function getFilters() {
 
 const toggleFilters = function () {
 
+  filterButton.classList.toggle(`closeFilter`)
+  filterButton.classList.toggle(`FilterOpen`)
   //alert(document.querySelector(`.filters`))
   document.querySelector(`.filters`).classList.toggle(`makeFloat`)
   document.querySelector(`.filter-options`).classList.toggle(`hide`)
