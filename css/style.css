@@ -959,9 +959,10 @@ nav .legal {
 	object-position: center top;
 }
 
+/* overing a picture item list */
 .prd-heading-pictures li:hover {
 	opacity: 0.5;
-	box-shadow: -0.2em 0.2em 0.2em rgb(160, 160, 160); 
+	/* box-shadow: -0.2em 0.2em 0.2em rgb(160, 160, 160);  */
 }
 
 

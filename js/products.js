@@ -1,5 +1,7 @@
 const shortProductDescription = `Here is a shot of this product that might entice a user to click and add it to their cart.`
 const genericOverview = `aLorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime eos, ducimus sapiente est quaerat repellendus necessitatibus praesentium modi quo sequi ad quibusdam illum officia. Animi consectetur id omnis qui et.`
+
+//create products
 const products = [
     {
         sku: `lmp001`,
@@ -272,7 +274,6 @@ const products = [
             `floor-lamp-02-960w.jpg`,
             `wall-lamp-02-960w.jpg`,
             `wall-lamp-01-960w.jpg`
-
         ],
         picDescription: `white Chandelier and brown living room`,
         overDescription: genericOverview,

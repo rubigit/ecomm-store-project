@@ -92,17 +92,18 @@
     </header>
 
     <!-- Filtering product form -->
-    <!-- makeFloat -->
-    <form class="filters makeFloat">
+    <!-- toggle makeFloat class-->
+    <form class="filters ">
       <button type="button" class="filter-opt-button Content FilterOpen">Filter options</button>
       <!-- <h2 class="">Filters</h2> -->
-      <div class="filter-btn-collectio">
-        <!-- hide -->
+      <!-- toggle hide classs -->
+      <div class="filter-btn-collectio hide">
+
         <button type="button" id="btnClearFilter" class="clear-filter ">Clear all filters</button>
         <button type="button" id="btnApplyFilter" class="aplly-filter ">Apply Filters</button>
       </div>
-      <!-- hide -->
-      <div class="filter-options ">
+      <!-- toggle hide classs -->
+      <div class="filter-options hide">
         <fieldset>
           <legend>Lamp category</legend>
           <ul id="filterCategory" class="filter-list">
@@ -170,9 +171,13 @@
         </fieldset>
       </div>
     </form>
+
+    <!-- Result section -->
     <section class="results">
       <div class="results-hding">
         <h2 class="subheading">Results</h2>
+
+        <!-- sort options -->
         <fieldset class="sort-options">
           <label for="sort">Sort by</label>
           <select name="sort" id="sort">
@@ -188,6 +193,7 @@
 
     </section>
 
+    <!-- pagination section -->
     <nav id="pag" aria-label="Pagination" class="pagination">
       <p>1-6 of 23 products found</p>
       <ol class="pages">

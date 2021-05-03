@@ -124,6 +124,7 @@ function LoadPage(filters, sort, searchFilter) {
 }
 
 function getFilters() {
+  // declare group of filter
   let filters = []
   let category = []
   let lampFinish = []
@@ -131,7 +132,7 @@ function getFilters() {
 
   //CATEGORY
   let filterCategory = document.querySelector(`#filterCategory`).children
-
+  // Get category selected
   for (let i = 0; i < filterCategory.length; i++) {
     if (filterCategory[i].children[0].checked)
       category.push(filterCategory[i].children[0].value)
@@ -140,7 +141,7 @@ function getFilters() {
 
   //LAMP FINISH
   let filterLampFinish = document.querySelector(`#filterLampFinish`).children
-
+  // Get lamp finish selected
   for (let i = 0; i < filterLampFinish.length; i++) {
     if (filterLampFinish[i].children[0].checked)
       lampFinish.push(filterLampFinish[i].children[0].value)
@@ -149,7 +150,7 @@ function getFilters() {
 
   //BULB TYPE
   let filterBulbType = document.querySelector(`#filterBulbType`).children
-
+  // Get bulb type selected
   for (let i = 0; i < filterBulbType.length; i++) {
     if (filterBulbType[i].children[0].checked)
       bulbType.push(filterBulbType[i].children[0].value)
@@ -157,6 +158,7 @@ function getFilters() {
   filters[2] = bulbType
 
   //RATING
+  //get rating selected
   if (document.querySelector(`#aboveFour`).checked)
     filters[3] = 4
   else if (document.querySelector(`#aboveThree`).checked)
@@ -166,9 +168,11 @@ function getFilters() {
   else
     filters[3] = 0
 
+  //return the list of filters selected 
   return filters
 }
 
+//Toggle display of filter content
 const toggleFilters = function () {
 
   filterButton.classList.toggle(`closeFilter`)
@@ -181,6 +185,8 @@ const toggleFilters = function () {
   let filters = getFilters()
   LoadPage(filters, document.querySelector(`#sort`).value, document.querySelector(`#find`).value)
 }
+
+
 const applyFilter = function () {
   let filters = getFilters()
   LoadPage(filters, document.querySelector(`#sort`).value, document.querySelector(`#find`).value)
@@ -192,26 +198,27 @@ const searchFilter = function () {
   LoadPage(filters, document.querySelector(`#sort`).value, document.querySelector(`#find`).value)
 }
 
+//For each filter type, uncheck all the filters
 const clearFilters = function () {
-  //CATEGORY
+  //CATEGORY FILTER
   let filterCategory = document.querySelector(`#filterCategory`).children
   for (let i = 0; i < filterCategory.length; i++) {
     filterCategory[i].children[0].checked = false
   }
 
-  //LAMP FINISH
+  //LAMP FINISH FILTER
   let filterLampFinish = document.querySelector(`#filterLampFinish`).children
   for (let i = 0; i < filterLampFinish.length; i++) {
     filterLampFinish[i].children[0].checked = false
   }
 
-  //BULB TYPE
+  //BULB TYPE FILTER
   let filterBulbType = document.querySelector(`#filterBulbType`).children
   for (let i = 0; i < filterBulbType.length; i++) {
     filterBulbType[i].children[0].checked = false
   }
 
-  //RATING
+  //RATING FILTER
   document.querySelector(`#aboveFour`).checked = false
   document.querySelector(`#aboveThree`).checked = false
   document.querySelector(`#aboveTwo`).checked = false
@@ -219,32 +226,26 @@ const clearFilters = function () {
 }
 
 function sortProducts(event) {
-
   let filters = getFilters()
-
   LoadPage(filters, event.target.value, document.querySelector(`#find`).value)
-
 }
 
 // LOAD PAGE
-
-//initialize products
+//initialize products (new arrays) with no filters and default values
 LoadPage(new Array(new Array(), new Array(), new Array(), 0), 'name', '')
 
-// Select filter button
-// {
+// Get the filter options button
 const filterButton = document.querySelector(`.filter-opt-button`)
-
+//add clic event click and invoque funtion to toggle display of filter content
 filterButton.addEventListener(`click`, toggleFilters)
+
+//Clear filter button: add even click and invoque clear filter function
 document.querySelector(`#btnClearFilter`).addEventListener(`click`, clearFilters)
+//apply filter button: add event click and invoque aplly filter function
 document.querySelector(`#btnApplyFilter`).addEventListener(`click`, applyFilter)
+
+//search button: add event click and invoque search function
 document.querySelector(`#btnSearch`).addEventListener(`click`, searchFilter)
-
-
-document.querySelector(`.filters`).classList.toggle(`makeFloat`)
-document.querySelector(`.filter-options`).classList.toggle(`hide`)
-document.querySelector(`.filter-btn-collectio`).classList.toggle(`hide`)
-
+//sort selector: add event change  and invoque sort products function
 document.querySelector(`#sort`).addEventListener(`change`, sortProducts)
 
-// }

@@ -1,3 +1,81 @@
+# SOURCERS
+
+## Knowled sources
+
+Remove outline outline:none;
+https://developer.mozilla.org/es/docs/Web/CSS/outline#result
+
+Styling the "x" cancel search button in Webkit browsers
+https://stackoverflow.com/questions/20804016/editing-input-type-search-pseudo-element-button-x
+
+Using a background-image for checkbox
+https://stackoverflow.com/questions/37582952/using-a-background-image-for-checkbox
+
+Display the list when an item hover
+https://stackoverflow.com/questions/41801034/display-the-list-when-an-item-hover
+
+Multiple borders
+https://css-tricks.com/snippets/css/multiple-borders/
+
+
+Getting the url parameters inside the html page
+https://stackoverflow.com/questions/22607150/getting-the-url-parameters-inside-the-html-page
+
+
+Location search Property
+https://www.w3schools.com/jsref/prop_loc_search.asp
+
+
+window.location.search
+https://webplatform.github.io/docs/apis/location/search/
+
+
+Array.prototype.sort()
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
+
+How do I split a string, breaking at a particular character?
+https://stackoverflow.com/questions/96428/how-do-i-split-a-string-breaking-at-a-particular-character
+
+
+How to pass arguments to addEventListener listener function?
+https://stackoverflow.com/questions/256754/how-to-pass-arguments-to-addeventlistener-listener-function
+
+Declaring array of objects
+https://stackoverflow.com/questions/15742442/declaring-array-of-objects/15742476
+
+
+
+## Picture credits
+
+Name:	desk-lamp-01	Description:	Two table lamps in a bedroom	Credits:	Photo by Curtis Adams from Pexels	URL:	https://www.pexels.com/photo/photo-of-bedroom-3555619/
+
+Name:	desk-lamp-02	Description:	Clear Wine Glass Beside White Table Lamp	Credits:	Photo by cottonbro from Pexels	URL:	https://www.pexels.com/photo/clear-wine-glass-beside-white-table-lamp-6716221/
+
+Name:	floor-lamp-01	Description:	Floor lamp Beside chair and desk	Credits:	Photo by Francesca Tosolini on Unsplash	URL:	https://unsplash.com/photos/25Gx85b0r94				
+
+Name:	floor-lamp-02	Description:	Floor Lamp Beside Sofa and Window	Credits:	Photo by Vecislavas Popa from Pexels	URL:	https://www.pexels.com/photo/floor-lamp-beside-sofa-and-window-1571471/				
+
+Name:	wall-lamp-01	Description:	Wall lamp in a modern bright livingroom	Credits:	Photo by Max Vakhtbovych from Pexels	URL:	https://www.pexels.com/photo/interior-of-studio-with-dining-and-living-zone-near-kitchen-6238683/				
+
+Name:	wall-lamp-02	Description:	Two wall lamps in a bedroom	Credits:	Photo by Pixabay from Pexels 	URL:	https://www.pexels.com/photo/closed-wardrobe-near-on-bed-271643/
+
+Name:	chand-01	Description:	Chandelier in a living room	Credits:	Photo by Houzlook .com from Pexels	URL:	https://www.pexels.com/photo/living-room-3797991/
+
+Name:	chand-02	Description:	Chandelier and red and brown floral stair carpet	Credits:	Photo by  Pixabay  from Pexels	URL:	https://www.pexels.com/photo/red-and-brown-floral-stair-carpet-161758/
+
+Name:	floor-lamp-03	Description:	Bedroom interior with lamps near bed and mirror wall	Credits:	Photo by Max Vakhtbovych  from Pexels	URL:	https://www.pexels.com/photo/bedroom-interior-with-lamps-near-bed-and-mirror-wall-6480210/
+
+Name:	floor-lamp-04	Description:	Floor lamp and green sofa	Credits:	Photo by Chait Goli  from Pexels	URL:	https://www.pexels.com/photo/green-2-seat-sofa-1918291/
+
+Name:	chand-03	Description:	Chandelier and grind curtains	Credits:	Photo by Victoria Borodinova  from Pexels	URL:	https://www.pexels.com/photo/sofa-chairs-in-living-room-1648776/
+
+Name:	chand-04	Description:	white Chandelier and brown living room	Credits:	Photo by Sharath G  from Pexels	URL:	https://www.pexels.com/photo/interior-design-of-a-living-room-2517507/
+
+
+
+
+
 # Web Design & Development 1
 ## E-Comm Webstore: PART 2
 
