@@ -1,5 +1,18 @@
-# SOURCERS
+# REPORTS
+## Lighthouse report
+File: LIGHTHOUSE REPORT.JPG, it can be found in img folder.
+## Validator.w3.org
+File: VALIDATOR.W3.JPG,  it can be found in img folder.
+### NOTES:
+The report shows 3 warning/errors:
+    1. Warning: Consider adding a lang attribute to the html
+       Note: The html has defined the laguage attibute.
+    2. Error: Non-space characters found without seeing a doctype first. Expected <!DOCTYPE html>.
+       Note: The html has defined <!DOCTYPE html>.
+    3. Error: Element head is missing a required instance of child element title.
+       Note: The html has defined title element.
 
+# SOURCERS
 ## Knowled sources
 
 Remove outline outline:none;
@@ -71,6 +84,12 @@ Name:	floor-lamp-04	Description:	Floor lamp and green sofa	Credits:	Photo by Cha
 Name:	chand-03	Description:	Chandelier and grind curtains	Credits:	Photo by Victoria Borodinova  from Pexels	URL:	https://www.pexels.com/photo/sofa-chairs-in-living-room-1648776/
 
 Name:	chand-04	Description:	white Chandelier and brown living room	Credits:	Photo by Sharath G  from Pexels	URL:	https://www.pexels.com/photo/interior-design-of-a-living-room-2517507/
+
+
+
+
+
+
 
 
 
