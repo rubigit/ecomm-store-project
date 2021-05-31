@@ -100,7 +100,8 @@ html {
 	grid-template-columns: 1fr auto auto;
 	grid-template-areas: 
 	"logo prod menu"
-	"srch srch srch";
+	"srch srch srch"
+	"navi navi navi";
 	gap:var(--common-gap);
 	justify-content: space-between;
 
@@ -162,6 +163,9 @@ html {
 	color: var(--ctheme-c-red);
 	font-size: var(--fsize-xxl);
 } 
+
+
+
 
 /* ================  SEARCH FORM =============== */
 /* --- form search container */
@@ -233,12 +237,63 @@ html {
 border-color: var(--ctheme-malibu);
 }
 
+
 /* ================  NAVIGATION MENU =============== */
 /* --- Nav for navigation menu items-- */
 .navigation {
-	display: none;
+	
+	grid-area: navi;
 	position: relative;
+	font-family: var(--fnt-nuni); 
+	font-size: var(--fsize-xxl);
+	color: var(--clor-wsmoke);
+	display: flex;
+	
+	
 }
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	top: -2em;
+	left:-1em;
+	right: -1em;
+	position:absolute;
+	background-color: rgb(0, 0, 0);
+
+	z-index: 1;
+	
+	padding: 1em;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	gap: 1em;
+	min-width: 100%;
+	height: 50em;
+	
+}
+
+.menu li {
+padding:1em 0 0 2em;
+
+}
+
+.menu li a{
+color: inherit; 
+}
+
+/* menu items hover */
+.menu li a:hover{
+	color: var(--ctheme-malibu);
+	font-weight: bolder;
+	text-decoration: underline;
+	text-underline-position: under;
+	text-decoration-thickness: 0.25em;
+	
+	
+}
+
 
 /* ===================================================
 						MAIN 
@@ -1320,6 +1375,10 @@ h4, fieldset legend, .overview-submenu a{
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
   @media screen and (min-width: 50em) {
+
+	.dddelete{
+		color:red;
+	}
 	 /* update font sizes */
 	html{
 		/*VAR FONTS SIZE*/
@@ -1355,76 +1414,66 @@ h4, fieldset legend, .overview-submenu a{
 
 	/* menu navigator container */
 	.navigation {
-		display: flex;
-		color: burlywood;
-		grid-area: nav;
 	
+		grid-area: nav;
 		height: auto;
-		max-height: fit-content;
+		/* max-height: fit-content; */
 		align-items: center;
 		justify-content: space-between;
-		padding: 2em 4em;
-		z-index: 1;
+		padding-top: 2em;
+		position: static;
+		font-size: var(--fsize-reg);
+	
+		
 		
 	}
 	 /* menu lists */
 	.menu{
 		background: rgb(51, 51, 51);
 		display: flex;
+		flex-direction: row;
 		flex:1 1 auto;
 		justify-content: space-evenly;
-		gap:1em; /* --saparate menus between each others */
 		padding:calc(var(--common-padding)/2);
 		border-radius: var(--common-bradius);
 		position: relative;
+		height: auto;
+
+
 	}
 
 	/* menu list items */
 	.menu li{
 		display:flex;
 		flex-direction: column;
-		/* border:0.2em solid rgb(255, 255, 255); */
-		gap:1em;   /* --- separate Menu from submenu */
 		flex:1 1 auto;
-		font-family: var(--fnt-nuni);
-		font-size: var(--fsize-reg);
+		padding:0;
+		
+			
 	}
 
-	/* display submenu */
-	.menu li:hover .submenu{
-		display: flex;
-	}
 
 	/* hover submenu  light item list */
-	.menu li .light:hover .submenu{
-		display: flex;
-		top: 2.5em;
+	.menu .light:hover .submenu {
+		display: block; 
 		left: 3em;
 	}
 
 	/* hover submenu  shop item list */
-	.menu li .shop:hover .submenu{
-		display: flex;
-		position:absolute;
-		top:2.5em;
-		left: 6em;	
+	.menu .shop:hover .submenu{
+		display: block; 
+		left: 14em;
 	}
 	
-	/* menu items hover */
-	.menu li a:hover{
-		color: var(--ctheme-malibu);
-		font-weight: bolder;
-		text-decoration: underline;
-		text-underline-position: under;
-		text-decoration-thickness: 0.25em;
-		
-	}
+	
+
 	
 	/* menu options */
 	.menu li a{
 		padding:0.3em;
 		text-align: center;
-		color: var(--clor-wsmoke);
+	
+	
 	}
 
 	/* submenu list container */
@@ -1432,11 +1481,12 @@ h4, fieldset legend, .overview-submenu a{
 		display:none;
 		flex-direction: column;
 		justify-content: space-between;
-		padding-top: 3em;
-		padding-left: 1em;
-		gap:0.2em; 
 		position:absolute;
-		padding-left: var(--common-padding); 
+		top: 2em;
+		z-index: 1;
+		padding:0.5em;
+	
+	
 	}
 
 		
@@ -1450,16 +1500,15 @@ h4, fieldset legend, .overview-submenu a{
 	.submenu li a:hover{
 		color:#9fe1fd;
 		text-decoration:none ;
-		background-color:black;
+		background-color:rgb(40, 153, 110);
 	}
 
 
 	/* submenu options */
 	.submenu li a{
-		background: rgb(63, 63, 63);	
-		color: ma;
+		background: rgb(0, 0, 0);	
 		text-align: left;
-		padding: 0.5em;
+	
 	}
 
 
@@ -1496,15 +1545,49 @@ h4, fieldset legend, .overview-submenu a{
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
   @media screen and (min-width: 60em) {
+	.dddelete{
+		color:rgb(21, 182, 42);
+	}
 
-	/* update sub menu padding */
-	.submenu { padding-left: 2em;}
+
 
 	/* update grid Main FOR SINGLE PRODUCT PAGE */
 	.prd-product { grid-template-columns: 1fr 1fr; }
 
 	/* update border for the gallery for single product page */
 	.prd-heading-pictures{border-right: 0.05em solid var(--clor-silver);}
+
+
+	/* hover submenu  light item list */
+.menu .light:hover .submenu {
+	left: 4em;
+}
+
+/* hover submenu  shop item list */
+.menu .shop:hover .submenu{
+	left: 17em;
+}
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY 65em
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@media screen and (min-width: 65em) {
+
+	.dddelete{
+		color:rgb(243, 246, 67);
+	}
+
+	/* hover submenu  light item list */
+	.menu .light:hover .submenu {
+		left: 4.5em;
+	}
+	
+	/* hover submenu  shop item list */
+	.menu .shop:hover .submenu{
+		left: 18.5em;
+	}
 
 }
 
@@ -1514,8 +1597,19 @@ h4, fieldset legend, .overview-submenu a{
 
   @media screen and (min-width: 70em) {
 
-	/* update sub menu padding */
-	.submenu{ padding-left: 2em; }
+	.dddelete{
+		color:rgb(182, 21, 161);
+	}
+
+	/* hover submenu  light item list */
+	.menu .light:hover .submenu {
+		left: 4em;
+	}
+	
+	/* hover submenu  shop item list */
+	.menu .shop:hover .submenu{
+		left: 17em;
+	}
 
 	/* --------------------------------------------- */
 
@@ -1548,5 +1642,41 @@ h4, fieldset legend, .overview-submenu a{
 	/* update font size */
 	.page-header {font-size:var(--fsize-xxl); }
 	.menu li{font-size: var(--fsize-reg);}
+
+	.dddelete{
+		color:rgb(248, 248, 248);
+	}
+
+	/* hover submenu  light item list */
+	.menu .light:hover .submenu {
+		left: 4.2em;
+	}
+	
+	/* hover submenu  shop item list */
+	.menu .shop:hover .submenu{
+		left: 18em;
+	}
+
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+							MEDIA QUERY 90em
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+@media screen and (min-width: 90em) {
+
+
+	.dddelete{
+		color:rgb(49, 224, 210);
+	}
+
+	/* hover submenu  light item list */
+	.menu .light:hover .submenu {
+		left: 5.5em;
+	}
+	
+	/* hover submenu  shop item list */
+	.menu .shop:hover .submenu{
+		left: 22em;
+	}
 
 }

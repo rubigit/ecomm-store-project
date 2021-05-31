@@ -249,3 +249,9 @@ document.querySelector(`#btnSearch`).addEventListener(`click`, searchFilter)
 //sort selector: add event change  and invoque sort products function
 document.querySelector(`#sort`).addEventListener(`change`, sortProducts)
 
+const toggleMenu = function () {
+  document.querySelector(`.menu`).classList.toggle(`hide`)
+}
+
+//get  button menu, add event clic and invove toggle Menu
+document.querySelector(`.nav-toggle`).addEventListener(`click`, toggleMenu)
