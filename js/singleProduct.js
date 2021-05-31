@@ -74,4 +74,16 @@ for (let i = 0; i < parseInt(aStars[0]); i++) {
 if (aStars[1] && parseInt(aStars[1]) == 5)
     sStarRate += '<span class="material-icons">star_half</span>'
 
-document.querySelector(`#`).innerHTML = sStarRate
+document.querySelector(`#productRate`).innerHTML = sStarRate
+
+
+const toggleMenu = function () {
+    document.querySelector(`.menu`).classList.toggle(`hide`)
+    toggleMenuBtn.classList.toggle(`openMenuBtn`)
+    toggleMenuBtn.classList.toggle(`closeMenuBtn`)
+
+}
+
+//get  button menu, add event clic and invove toggle Menu
+const toggleMenuBtn = document.querySelector(`.nav-toggle`)
+toggleMenuBtn.addEventListener(`click`, toggleMenu)
