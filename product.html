@@ -15,23 +15,24 @@
 
 
 <body>
-
     <header class="page-header">
+
         <!-- grid area 1 -->
 
         <a href="index.html" class="logo">
-            <img src="img/logo-landscape-light-03.svg" alt="Lilights logo" height="55">
+            <h1 class=dddelete>asd</h1>
+            <!-- <img src="img/logo-landscape-light-03.svg" alt="Lilights logo" height="55"> -->
         </a>
 
         <!-- Navigation menu and toggle button (non-functional) 
-    grid area 4-->
-        <button type="button" class="nav-toggle">
-            <span class="material-icons">menu</span>
+      grid area 4-->
+        <button type="button" value="nav-toggle" class="nav-toggle openMenuBtn">
+            <!-- <span class="material-icons">menu</span> -->
         </button>
 
         <nav aria-label="Primary" class="navigation">
-            <ul class="menu">
-                <li><a href="#"><span>Lightning</span><span>&dtrif;</span></a>
+            <ul class="menu hide">
+                <li class="light"><a href="#"><span>Lightning</span><span>&dtrif;</span></a>
                     <ul class="submenu">
                         <li>
                             <a href="#">Desk &amp; Table</a>
@@ -41,13 +42,14 @@
                         <li><a href="#">Chandelier</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="shop">
                     <a href="#"><span>Shop</span><span>&dtrif;</span></a>
                     <ul class="submenu">
                         <li><a href="#">By style</a></li>
                         <li><a href="#">By room</a></li>
                     </ul>
                 </li>
+
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">About Us</a></li>
             </ul>
@@ -59,14 +61,15 @@
             <label><span>Search</span>
                 <input class="ibox-srch" type="search" name="find" id="find" placeholder="Type to search..">
             </label>
-            <button type="button"><span class="material-icons">search</span></button>
+            <button id="btnSearch" type="button"><span class="material-icons">search</span></button>
 
         </form>
 
         <!-- grid area 3 -->
         <ul class="your-products">
             <li><a href="#"><span class="material-icons" aria-label="Favourites">favorite_border</span></a></li>
-            <li><a href="#"><span class="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li>
+            <li><a href="#"><span class="material-icons" aria-label="Items in your cart">shopping_cart</span></a>
+            </li>
         </ul>
 
     </header>
