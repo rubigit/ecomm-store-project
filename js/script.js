@@ -1,5 +1,6 @@
 function LoadPage(filters, sort, searchFilter) {
 
+
   const productTable = document.querySelector(`#results`)
   productTable.innerHTML = ""
 
@@ -33,7 +34,9 @@ function LoadPage(filters, sort, searchFilter) {
 
   })
 
+  let result = 0
   products.forEach((product) => {
+
 
     let addProduct = false
 
@@ -84,6 +87,8 @@ function LoadPage(filters, sort, searchFilter) {
     }
 
     if (addProduct) {
+      result++
+
       const displayProduct = document.createElement(`article`)
       displayProduct.classList.add(`product`)
       let sInnerHTML = `
@@ -121,7 +126,11 @@ function LoadPage(filters, sort, searchFilter) {
       productTable.appendChild(displayProduct)
     }
   })
+
+  document.querySelector(`.qtyResults`).innerHTML = `(${result} results)`
 }
+
+
 
 function getFilters() {
   // declare group of filter
@@ -169,6 +178,7 @@ function getFilters() {
     filters[3] = 0
 
   //return the list of filters selected 
+
   return filters
 }
 
