@@ -251,7 +251,12 @@ document.querySelector(`#sort`).addEventListener(`change`, sortProducts)
 
 const toggleMenu = function () {
   document.querySelector(`.menu`).classList.toggle(`hide`)
+  toggleMenuBtn.classList.toggle(`openMenuBtn`)
+  toggleMenuBtn.classList.toggle(`closeMenuBtn`)
+
 }
 
 //get  button menu, add event clic and invove toggle Menu
-document.querySelector(`.nav-toggle`).addEventListener(`click`, toggleMenu)
+const toggleMenuBtn = document.querySelector(`.nav-toggle`)
+toggleMenuBtn.addEventListener(`click`, toggleMenu)
+
