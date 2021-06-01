@@ -675,7 +675,7 @@ input[type=radio]:checked + label{
 
 	color: var(--ctheme-dawn);
 	font-family: var(--fnt-nuni);
-	font-size: inherit;
+	
 	font-size: var(--fsize-xs);
 	width: fit-content;
 	
@@ -686,6 +686,7 @@ input[type=radio]:checked + label{
 
 .sort-label {
 	padding-left: calc(var(--common-padding)/4);
+	font-size: inherit;
 }
 
 /* --sort by options */
@@ -698,7 +699,7 @@ input[type=radio]:checked + label{
 	border: none;
 
 	color:inherit;
-	font-size: var(--fsize-s);	
+	font-size: inherit;	
 	font-weight: bolder;
 	background-color: transparent;
 	width: fit-content;
@@ -1584,6 +1585,13 @@ h4, fieldset legend, .overview-submenu a{
 	}
 
 
+	.subheading {
+		font-size: var(--fsize-xxxl);
+	}
+
+	.qtyResults, .sort-options {
+		font-size: var(--fsize-s);
+	}
 
 	/* update grid Main FOR SINGLE PRODUCT PAGE */
 	.prd-product { grid-template-columns: 1fr 1fr; }
@@ -1712,5 +1720,7 @@ h4, fieldset legend, .overview-submenu a{
 	.menu .shop:hover .submenu{
 		left: 22em;
 	}
+
+	
 
 }
