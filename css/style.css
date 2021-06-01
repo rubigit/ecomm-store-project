@@ -622,17 +622,20 @@ input[type=radio]:checked + label{
 	color:var(--ctheme-dawn);
 	font-size: var(--fsize-reg);
 	font-family: var(--fnt-nuni);
+
+	
 }
 
 /* --container for results subheading and sort by options */
 .results-hding {
-	display:flex;
-	/* flex-direction: column; */
+	
+	
+	display:grid;
+	grid-template-columns: 1fr, 1fr;
+    grid-template-areas: ". ."; 
 	justify-content: space-between;
 	gap:var(--common-gap);
 	
-	padding: calc(var(--common-padding) /2) 0;
-	align-items: flex-start;
 
 	color:var(--ctheme-malibu);
 	font-size: var(--fsize-xxl);
@@ -641,35 +644,65 @@ input[type=radio]:checked + label{
 	vertical-align: middle;
 }
 
+.results-subheading {
+	
+	display: flex;
+	flex-direction: column;
+	gap: var(--common-gap);
+	
+}
+
 /* results subheading */
 .subheading {
 	font-weight: inherit;
 }
 
+.qtyResults {
+	font-weight: inherit;
+	font-size:var(--fsize-xs);
+	color: var(--clor-dim-gray);
+}
+
 /* container for sort by label and sort by options */
 .sort-options {
 	display: flex;
+	flex-direction: column;
 	gap: var(--common-gap);
 
-	align-items: center;
-	border:0;
+	align-items: flex-start;
+	border-color: var(--clor-silver); 
+	border-radius: var(--common-bradius);
 
 	color: var(--ctheme-dawn);
 	font-family: var(--fnt-nuni);
+	font-size: inherit;
 	font-size: var(--fsize-xs);
+	width: fit-content;
+	
+	
+
+	
+}
+
+.sort-label {
+	padding-left: calc(var(--common-padding)/4);
 }
 
 /* --sort by options */
 .sort-options select{
-	border-color: var(--clor-silver);
-	border-radius: var(--common-bradius);
-	padding: calc(var(--common-padding)/2);
+	
+	padding: 0;
 
 	outline: none;
 	cursor: pointer;
+	border: none;
 
 	color:inherit;
 	font-size: var(--fsize-s);	
+	font-weight: bolder;
+	background-color: transparent;
+	width: fit-content;
+
 }
 
 /* ===================================================

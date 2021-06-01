@@ -177,19 +177,22 @@
     <!-- Result section -->
     <section class="results">
       <div class="results-hding">
-        <h2 class="subheading">Lightning</h2>
-        <h3 class="qtyResults">qtyResults</h3>
-
-        <!-- sort options -->
-        <fieldset class="sort-options">
-          <label for="sort">Sort by</label>
-          <select name="sort" id="sort">
-            <option value="name">Name</option>
-            <option value="high">Price, highest to lowest</option>
-            <option value="low">Price, lowest to highest</option>
-            <option value="rate">Rating</option>
-          </select>
-        </fieldset>
+        <div class="results-subheading">
+          <h2 class="subheading">Lightning</h2>
+          <h3 class="qtyResults">qtyResults</h3>
+        </div>
+        <div>
+          <!-- sort options -->
+          <fieldset class="sort-options">
+            <label class="sort-label" for="sort">Sort by</label>
+            <select name="sort" id="sort">
+              <option value="name">Name</option>
+              <option value="high">Price, highest to lowest</option>
+              <option value="low">Price, lowest to highest</option>
+              <option value="rate">Rating</option>
+            </select>
+          </fieldset>
+        </div>
       </div>
     </section>
     <section id="results" class="results">
